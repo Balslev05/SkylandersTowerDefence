@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class WayPointManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform[] wayPoints;
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        wayPoints = new Transform[transform.childCount];
+        for (int i = 0; i < wayPoints.Length; i++)
+        {
+            wayPoints[i] = transform.GetChild(i);
+        }
     }
 }
