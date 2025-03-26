@@ -6,14 +6,21 @@ public abstract class TowerBase : MonoBehaviour
 {
     public string ID;
     [Header("Stats")]
+    public GameObject Bulletprefab;
+    public Transform ShootPoint;
     public int range = 6;
     public int damage = 10;
     public int fireRate = 1;
     public int buildTime = 2;
     public GameObject OnHitSpawn;
     [HideInInspector] public Transform target;
-    
     [HideInInspector] public bool canFire = false;
+    [Header("UpgradePathWay 1")]
+    public int upgrade1Price = 0;
+    public GameObject upgrade1Prefab;
+    [Header("UpgradePathWay 2")]
+    public int upgrade2Price = 0;
+    public GameObject upgrade2Prefab;
 
     public abstract void Fire();
     public abstract void OnHit(GameObject Bullet);

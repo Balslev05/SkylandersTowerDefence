@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2485940935149961855
+--- !u!1 &28390760529094901
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1522629804672725283}
+  - component: {fileID: 3881474238784053870}
   m_Layer: 0
   m_Name: ShootPoint
   m_TagString: Untagged
@@ -16,22 +16,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1522629804672725283
+--- !u!4 &3881474238784053870
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2485940935149961855}
+  m_GameObject: {fileID: 28390760529094901}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3952001633240271184}
+  m_Father: {fileID: 1224750008109287417}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5557325181350559953
+--- !u!1 &1556685398034945789
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,39 +39,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3952001633240271184}
-  - component: {fileID: 5515927520280080082}
-  - component: {fileID: 1265514753196625885}
+  - component: {fileID: 1224750008109287417}
+  - component: {fileID: 8283930520372428982}
+  - component: {fileID: 7186421499319050950}
   m_Layer: 0
-  m_Name: TowerAOE
+  m_Name: TowerRangeTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3952001633240271184
+--- !u!4 &1224750008109287417
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5557325181350559953}
+  m_GameObject: {fileID: 1556685398034945789}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7, y: 5.1, z: -0.052426193}
+  m_LocalPosition: {x: 6.6, y: 11.1, z: -0.052426193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1522629804672725283}
+  - {fileID: 3881474238784053870}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5515927520280080082
+--- !u!212 &8283930520372428982
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5557325181350559953}
+  m_GameObject: {fileID: 1556685398034945789}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -110,7 +110,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -5177388603050735206, guid: 71ebafeef3c03457483266a33ab2b270, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.055535723, g: 0.4528302, b: 0.07774471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,30 +120,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1265514753196625885
+--- !u!114 &7186421499319050950
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5557325181350559953}
+  m_GameObject: {fileID: 1556685398034945789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4967ff4e02299c64d9f004405af9334e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a7c0a5ceba137f4a9c64fff302092b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: AOE
-  Bulletprefab: {fileID: 6844150545549898088, guid: a4814548d2569654f9c93b4a090e8d0d, type: 3}
-  ShootPoint: {fileID: 1522629804672725283}
-  range: 5
+  ID: 1
+  Bulletprefab: {fileID: 0}
+  ShootPoint: {fileID: 0}
+  range: 10
   damage: 10
-  fireRate: 3
+  fireRate: 1
   buildTime: 2
-  OnHitSpawn: {fileID: 7964889459092918624, guid: 2745045bc70719049a132aed04d72b8c, type: 3}
+  OnHitSpawn: {fileID: 0}
   target: {fileID: 0}
   canFire: 0
   upgrade1Price: 0
   upgrade1Prefab: {fileID: 0}
   upgrade2Price: 0
   upgrade2Prefab: {fileID: 0}
-  offsetScale: 1.3
+  offsetScale: 1

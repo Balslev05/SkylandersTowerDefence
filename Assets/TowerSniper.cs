@@ -1,8 +1,9 @@
 using UnityEngine;
 using DG.Tweening;
-public class TowerAoe : TowerBase
+
+public class TowerSniper : TowerBase
 {
-    [Header("TowerStats")]
+   [Header("TowerStats")]
     [SerializeField] private float offsetScale = 1;
 
     void Start()
@@ -26,13 +27,13 @@ public class TowerAoe : TowerBase
 
         bullet.DOScale(bullet.localScale * offsetScale, DistanceToTarget() / 2).SetEase(Ease.OutCubic).OnComplete(() =>
         bullet.DOScale(startScale*0.8f, DistanceToTarget() / 2).SetEase(Ease.InQuint));  
-    
-        bullet.DORotate(Vector3.forward * 360, 0.5f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1);
+
+        bullet.transform.LookAt(target.position);
         bullet.DOMove(target.position, DistanceToTarget()).OnComplete(() => OnHit(bullet.gameObject));
         
         StartCoroutine(reloade());
     }
-
+    
 
     public override void OnHit(GameObject Bullet)
     {
@@ -41,7 +42,4 @@ public class TowerAoe : TowerBase
       // POP UP EFFEKT HERE
         Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
     }
-
-
-
 }
