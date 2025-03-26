@@ -9,7 +9,10 @@ public class Gamemanager : MonoBehaviour
 
     public void Start()
     {
-        SpawnTowers(1,6);
+        SpawnTowers(2,6);
+        SpawnTowers(1,5);
+        SpawnTowers(0,4);
+
     }
     public void SpawnTowers(int idTower, int IdPoints)
     {

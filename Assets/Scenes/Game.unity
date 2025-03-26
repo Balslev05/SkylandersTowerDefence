@@ -449,8 +449,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 100
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 14
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -527,7 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - {fileID: 5557325181350559953, guid: 88f8f2728a7efda4cbde0ef41b9569e4, type: 3}
-  - {fileID: 1638286275336101310, guid: bb9e7949ff49f344db5f307171699c19, type: 3}
+  - {fileID: 1149564845400881100, guid: bb9e7949ff49f344db5f307171699c19, type: 3}
   - {fileID: 1556685398034945789, guid: 8b09e396b8db7a4488e2a63d9fb63f75, type: 3}
   Spawners:
   - {fileID: 1281728328}
