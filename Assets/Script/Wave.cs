@@ -8,5 +8,5 @@ public class Wave : ScriptableObject
 
     public List<bool> SpawnLeft = new List<bool>();
 
-    [HideInInspector] public float spawnDelay = 0.1f;
+    [HideInInspector] public float spawnDelay = 0f;
 }

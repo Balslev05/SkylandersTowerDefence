@@ -138,6 +138,7 @@ MonoBehaviour:
   range: 5
   damage: 10
   fireRate: 3
+  BulletSpeed: 0.5
   buildTime: 2
   OnHitSpawn: {fileID: 7964889459092918624, guid: 2745045bc70719049a132aed04d72b8c, type: 3}
   target: {fileID: 0}
