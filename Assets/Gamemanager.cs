@@ -16,6 +16,10 @@ public class Gamemanager : MonoBehaviour
     }
     public void SpawnTowers(int idTower, int IdPoints)
     {
+        SpawnTowers(idTower, 0, IdPoints);   
+    }  
+    public void SpawnTowers(int idTower, int Upgrade, int IdPoints)
+    {
         Instantiate(towers[idTower], Spawners[IdPoints].transform.position, Quaternion.identity);
     }  
 }
