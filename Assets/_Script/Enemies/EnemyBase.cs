@@ -5,22 +5,24 @@ public class EnemyBase : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody2D rb;
-    public WayPointManager wayPointManager;
     public Transform target;
+    public WayPointManager wayPointManager;
     private int wayPointIndex = 0;
 
     private Vector2 direction;
 
     [Header("Stats")]
-    [SerializeField] private float moveSpeed;
     [SerializeField] private float maxHealth;
-    private float currentHealth;
+    public float currentHealth;
+    public float moveSpeed;
+    [SerializeField] private float damage;
 
     private bool reachedEndPoint;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     private void FixedUpdate()
@@ -53,11 +55,8 @@ public class EnemyBase : MonoBehaviour
         target = wayPointManager.wayPoints[wayPointIndex];
     }
 
-    private void Spawn()
+    private void AttackBase()
     {
-        // liste af enemies 
-        // instanitate Shit here
-        // Get Random / or not waypoint left or right 
-        // wave controller
+        
     }
 }

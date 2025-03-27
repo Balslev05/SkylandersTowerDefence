@@ -11,6 +11,8 @@ public class WaveManager : MonoBehaviour
 
     private int currentWave;
 
+    [SerializeField] private int betweenWavesCooldown;
+
     private void Start()
     {
         currentWave = 0;
@@ -39,10 +41,17 @@ public class WaveManager : MonoBehaviour
 
             yield return new WaitForSeconds(waves[currentWave].spawnDelay);
         }
-    }
 
-    private bool CheckEnemiesLeft()
-    {
-        return false;
+        yield return new WaitForSeconds(betweenWavesCooldown);
+        currentWave++;
+        if (currentWave <= waves.Count)
+        {
+            Debug.Log("Next Wave Incoming");
+            StartCoroutine(StartBattle());
+        }
+        else
+        {
+            Debug.Log("Game Won");
+        }
     }
 }
