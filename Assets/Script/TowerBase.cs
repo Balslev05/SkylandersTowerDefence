@@ -39,7 +39,10 @@ public abstract class TowerBase : MonoBehaviour
         }
         SetTarget(t);
     }
-    
+    public void damageTarget(GameObject target)
+    {
+        // DO SHIT HERE I THINK :=
+    }
     public IEnumerator Build()
     {
         this.transform.localScale = new Vector3(0, 0, 0);
@@ -57,7 +60,7 @@ public abstract class TowerBase : MonoBehaviour
     public float DistanceToTarget()
     {
         float distance = Vector2.Distance(transform.position, target.position);
-        return (distance/4 - BulletSpeed)+0.1f;
+        return Mathf.Ceil(distance/3- BulletSpeed)+0.5f;
     }
 
     private void SetTarget(Transform _target)

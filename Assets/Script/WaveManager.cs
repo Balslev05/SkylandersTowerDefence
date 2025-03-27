@@ -37,7 +37,7 @@ public class WaveManager : MonoBehaviour
                 Spawn(RightWayPointManager, waves[currentWave].Enemies[i]);
             }
 
-            yield return new WaitForSeconds(waves[currentWave].spawnDelay);
+            yield return new WaitForSeconds(0);
         }
     }
 
