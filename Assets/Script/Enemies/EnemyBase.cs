@@ -5,8 +5,8 @@ public class EnemyBase : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody2D rb;
-    [SerializeField] private WayPointManager wayPointManager;
-    private Transform target;
+    public WayPointManager wayPointManager;
+    public Transform target;
     private int wayPointIndex = 0;
 
     private Vector2 direction;
@@ -21,7 +21,6 @@ public class EnemyBase : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        target = wayPointManager.wayPoints[0];
     }
 
     private void FixedUpdate()
