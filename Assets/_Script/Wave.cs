@@ -7,6 +7,6 @@ public class Wave : ScriptableObject
     public List<GameObject> Enemies = new List<GameObject>();
 
     public List<bool> SpawnLeft = new List<bool>();
-
-    [HideInInspector] public float spawnDelay = 0.2f;
+    
+    public float spawnDelay = 10f;
 }

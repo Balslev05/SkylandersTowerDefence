@@ -405,7 +405,7 @@ Transform:
   m_GameObject: {fileID: 352067028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26311794, y: 1.3955469, z: -0.08654184}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -997,8 +997,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778436874}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.26311794, y: -1.3955469, z: 0.08654184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   waves:
   - {fileID: 11400000, guid: c767fb730abe89b419b1bca3a837af76, type: 2}
   - {fileID: 11400000, guid: 2b34b3e2cee93a84cb8ffa5614ba5457, type: 2}
-  - {fileID: 11400000, guid: c767fb730abe89b419b1bca3a837af76, type: 2}
+  betweenWavesCooldown: 10
 --- !u!4 &1518624948
 Transform:
   m_ObjectHideFlags: 0

@@ -44,7 +44,7 @@ public class WaveManager : MonoBehaviour
 
         yield return new WaitForSeconds(betweenWavesCooldown);
         currentWave++;
-        if (currentWave <= waves.Count)
+        if (currentWave < waves.Count)
         {
             Debug.Log("Next Wave Incoming");
             StartCoroutine(StartBattle());

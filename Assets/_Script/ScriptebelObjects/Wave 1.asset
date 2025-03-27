@@ -24,4 +24,4 @@ MonoBehaviour:
   - {fileID: 7979428467619501736, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
   - {fileID: 7979428467619501736, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
   SpawnLeft: 01000100010001000100
-  spawnDelay: 0.1
+  spawnDelay: 0.5
