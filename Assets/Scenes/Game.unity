@@ -449,8 +449,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 100
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 14
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -481,6 +481,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &753481579
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753481580}
+  - component: {fileID: 753481581}
+  - component: {fileID: 753481582}
+  - component: {fileID: 753481583}
+  m_Layer: 0
+  m_Name: Arduino
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &753481580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753481579}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6119213, y: 4.5570393, z: -0.21564394}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &753481581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753481579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portName: COM3
+  baudRate: 9600
+  messageListener: {fileID: 753481579}
+  reconnectionDelay: 1000
+  maxUnreadMessages: 1
+--- !u!114 &753481582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753481579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a03027548d784348a5d2b1fbe819cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serialController: {fileID: 753481581}
+--- !u!114 &753481583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753481579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5457215d00582d4592c02304326864c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serialController: {fileID: 0}
+  towerID: 0
+  upgradeLevel: 0
+  placementID: 0
 --- !u!1 &778436874
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +572,7 @@ GameObject:
   - component: {fileID: 778436875}
   - component: {fileID: 778436876}
   m_Layer: 0
-  m_Name: NfcManager
+  m_Name: Tower&Spawners
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -527,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towers:
   - {fileID: 5557325181350559953, guid: 88f8f2728a7efda4cbde0ef41b9569e4, type: 3}
-  - {fileID: 1638286275336101310, guid: bb9e7949ff49f344db5f307171699c19, type: 3}
+  - {fileID: 1149564845400881100, guid: bb9e7949ff49f344db5f307171699c19, type: 3}
   - {fileID: 1556685398034945789, guid: 8b09e396b8db7a4488e2a63d9fb63f75, type: 3}
   Spawners:
   - {fileID: 1281728328}
@@ -871,3 +951,4 @@ SceneRoots:
   - {fileID: 572415585}
   - {fileID: 778436875}
   - {fileID: 2111875221}
+  - {fileID: 753481580}

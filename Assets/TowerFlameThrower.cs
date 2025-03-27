@@ -26,13 +26,17 @@ public class TowerFlameThrower : TowerBase
         Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
         Vector3 startScale = bullet.localScale;
 
-        bullet.DOScale(bullet.localScale * offsetScale, DistanceToTarget() / 2).SetEase(Ease.OutCubic).OnComplete(() =>
-        bullet.DOScale(startScale*0.8f, DistanceToTarget() / 2).SetEase(Ease.InQuint));  
+        StartGradient(bullet.GetComponent<SpriteRenderer>());
 
-        bullet.transform.LookAt(target.position);
+        bullet.DOScale(bullet.localScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
+
         bullet.DOMove(target.position, DistanceToTarget()).OnComplete(() => OnHit(bullet.gameObject));
         
         StartCoroutine(reloade());
+    }
+    public void StartGradient(SpriteRenderer bulletMaterial)
+    {
+        DOTween.To(() => bulletMaterial.color, x => bulletMaterial.color = x, FlameGradient.Evaluate(1), 0.5f);
     }
     
 

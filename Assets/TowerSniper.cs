@@ -21,18 +21,23 @@ public class TowerSniper : TowerBase
     }
 
     public override void Fire()
-    {
-        Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
-        Vector3 startScale = bullet.localScale;
+{
+    Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, Quaternion.identity).transform;
+    
+    // Compute the direction to the target
+    Vector3 direction = (target.position - bullet.position).normalized;
+    
+    // Adjust rotation to match 2D orientation
+    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+    bullet.rotation = Quaternion.Euler(0, 0, (angle-90));
+    
+    // Move towards the target
+    bullet.DOMove(target.position, DistanceToTarget()/1.5f).SetEase(Ease.OutQuint).OnComplete(() => OnHit(bullet.gameObject));
 
-        bullet.DOScale(bullet.localScale * offsetScale, DistanceToTarget() / 2).SetEase(Ease.OutCubic).OnComplete(() =>
-        bullet.DOScale(startScale*0.8f, DistanceToTarget() / 2).SetEase(Ease.InQuint));  
+    StartCoroutine(reloade());
+}
 
-        bullet.transform.LookAt(target.position);
-        bullet.DOMove(target.position, DistanceToTarget()).OnComplete(() => OnHit(bullet.gameObject));
-        
-        StartCoroutine(reloade());
-    }
+
     
 
     public override void OnHit(GameObject Bullet)

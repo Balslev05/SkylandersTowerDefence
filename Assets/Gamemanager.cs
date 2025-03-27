@@ -9,9 +9,16 @@ public class Gamemanager : MonoBehaviour
 
     public void Start()
     {
-        SpawnTowers(1,6);
+        SpawnTowers(2,6);
+        SpawnTowers(1,5);
+        SpawnTowers(0,4);
+
     }
     public void SpawnTowers(int idTower, int IdPoints)
+    {
+        SpawnTowers(idTower, 0, IdPoints);   
+    }  
+    public void SpawnTowers(int idTower, int Upgrade, int IdPoints)
     {
         Instantiate(towers[idTower], Spawners[IdPoints].transform.position, Quaternion.identity);
     }  

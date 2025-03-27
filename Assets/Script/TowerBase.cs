@@ -10,7 +10,7 @@ public abstract class TowerBase : MonoBehaviour
     public Transform ShootPoint;
     public int range = 6;
     public int damage = 10;
-    public int fireRate = 1;
+    public float fireRate = 1;
     public int buildTime = 2;
     public GameObject OnHitSpawn;
     [HideInInspector] public Transform target;
@@ -57,7 +57,7 @@ public abstract class TowerBase : MonoBehaviour
     public float DistanceToTarget()
     {
         float distance = Vector2.Distance(transform.position, target.position);
-        return distance/4 + 0.5f;
+        return distance/4 + +0.1f;
     }
 
     private void SetTarget(Transform _target)
