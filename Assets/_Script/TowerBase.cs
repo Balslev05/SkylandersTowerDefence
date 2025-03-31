@@ -4,13 +4,13 @@ using UnityEngine;
 using DG.Tweening;
 public abstract class TowerBase : MonoBehaviour
 {
-    public string ID;
     [Header("Stats")]
     public GameObject Bulletprefab;
     public Transform ShootPoint;
     public int range = 6;
     public int damage = 10;
     public float fireRate = 1;
+    public float BulletSpeed = 0.0f;
     public int buildTime = 2;
     public GameObject OnHitSpawn;
     [HideInInspector] public Transform target;
@@ -39,7 +39,10 @@ public abstract class TowerBase : MonoBehaviour
         }
         SetTarget(t);
     }
-
+    public void damageTarget(GameObject target)
+    {
+        // DO SHIT HERE I THINK :=
+    }
     public IEnumerator Build()
     {
         this.transform.localScale = new Vector3(0, 0, 0);
@@ -57,7 +60,7 @@ public abstract class TowerBase : MonoBehaviour
     public float DistanceToTarget()
     {
         float distance = Vector2.Distance(transform.position, target.position);
-        return distance/4 + +0.1f;
+        return Mathf.Ceil(distance/3- BulletSpeed)+0.5f;
     }
 
     private void SetTarget(Transform _target)
