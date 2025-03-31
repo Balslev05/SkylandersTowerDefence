@@ -58,13 +58,14 @@ public class Gamemanager : MonoBehaviour
             {
                 GameObject TowerTemp = SpawnedTowers[i];
 
-                SpawnedTowers.Remove(SpawnedTowers[i]);
-                UsedSpawners.Remove(UsedSpawners[i]);
 
                 Spawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
                 Spawners[i].GetComponent<SpriteRenderer>().color = Color.red;
                 Spawners[i].transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f), 0.5f);
+                
+                SpawnedTowers.Remove(SpawnedTowers[i]);
+                UsedSpawners.Remove(UsedSpawners[i]);
                 Destroy(TowerTemp);
             }
         }

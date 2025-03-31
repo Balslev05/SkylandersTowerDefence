@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 571191763366ea84d8719645e76434ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6106199786387371984
+    second: MapDDU Pipes_0
+  - first:
+      213: 8625598720360038738
+    second: MapDDU Pipes_1
+  - first:
+      213: -843981677944078776
+    second: MapDDU Pipes_2
+  - first:
+      213: -3021805114161878181
+    second: MapDDU Pipes_3
+  - first:
+      213: -6084069002149289309
+    second: MapDDU Pipes_4
+  - first:
+      213: -653827233816533946
+    second: MapDDU Pipes_5
+  - first:
+      213: 1977320378670920082
+    second: MapDDU Pipes_6
+  - first:
+      213: -336935507207674120
+    second: MapDDU Pipes_7
+  - first:
+      213: 5639756520926854003
+    second: MapDDU Pipes_8
+  - first:
+      213: -5855105815328721425
+    second: MapDDU Pipes_9
+  - first:
+      213: 7670266455771487104
+    second: MapDDU Pipes_10
+  - first:
+      213: -8550611122702834993
+    second: MapDDU Pipes_11
+  - first:
+      213: 4962391578819692298
+    second: MapDDU Pipes_12
+  - first:
+      213: -6890367638473568677
+    second: MapDDU Pipes_13
+  - first:
+      213: 6888883685155795217
+    second: MapDDU Pipes_14
+  - first:
+      213: -6504388062668469871
+    second: MapDDU Pipes_15
+  - first:
+      213: 2553299800305635396
+    second: MapDDU Pipes_16
+  - first:
+      213: -1893672911842944125
+    second: MapDDU Pipes_17
+  - first:
+      213: -3929363589493769450
+    second: MapDDU Pipes_18
+  - first:
+      213: 8010283275898813213
+    second: MapDDU Pipes_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MapDDU Pipes_0
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 2189
+        width: 73
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d77f2b8a549db450800000000000000
+      internalID: 6106199786387371984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_1
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 2190
+        width: 81
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251cf16f55844b770800000000000000
+      internalID: 8625598720360038738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_2
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 2427
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84e7431b2239944f0800000000000000
+      internalID: -843981677944078776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_3
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 1824
+        width: 1004
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b2ce542446016d0800000000000000
+      internalID: -3021805114161878181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_4
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 1856
+        width: 428
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a22de13a7b019ba0800000000000000
+      internalID: -6084069002149289309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_5
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1760
+        width: 380
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 644a3ef48932de6f0800000000000000
+      internalID: -653827233816533946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_6
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 1386
+        width: 290
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29132d9786ad07b10800000000000000
+      internalID: 1977320378670920082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_7
+      rect:
+        serializedVersion: 2
+        x: 2685
+        y: 1405
+        width: 42
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6abacf0f6f25bf0800000000000000
+      internalID: -336935507207674120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_8
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 1393
+        width: 44
+        height: 339
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37bb981dca0744e40800000000000000
+      internalID: 5639756520926854003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_9
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1237
+        width: 1243
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5f10b584c7ebea0800000000000000
+      internalID: -5855105815328721425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_10
+      rect:
+        serializedVersion: 2
+        x: 3006
+        y: 1117
+        width: 93
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b9ad4e3b2427a60800000000000000
+      internalID: 7670266455771487104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_11
+      rect:
+        serializedVersion: 2
+        x: 4207
+        y: 1078
+        width: 352
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc22bcaac70265980800000000000000
+      internalID: -8550611122702834993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_12
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 802
+        width: 39
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0700fb59d4fdd440800000000000000
+      internalID: 4962391578819692298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_13
+      rect:
+        serializedVersion: 2
+        x: 2705
+        y: 887
+        width: 396
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e8fe8b32f7060a0800000000000000
+      internalID: -6890367638473568677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_14
+      rect:
+        serializedVersion: 2
+        x: 4206
+        y: 984
+        width: 355
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111f1b8763b3a9f50800000000000000
+      internalID: 6888883685155795217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_15
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 531
+        width: 170
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199ca5bc485cbb5a0800000000000000
+      internalID: -6504388062668469871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_16
+      rect:
+        serializedVersion: 2
+        x: 2536
+        y: 490
+        width: 195
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4401b42f3a42f6320800000000000000
+      internalID: 2553299800305635396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_17
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 479
+        width: 208
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b52d0158258b5e0800000000000000
+      internalID: -1893672911842944125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_18
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 468
+        width: 171
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61bbede42a81879c0800000000000000
+      internalID: -3929363589493769450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MapDDU Pipes_19
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 422
+        width: 200
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b733af23e3a2f60800000000000000
+      internalID: 8010283275898813213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MapDDU Pipes_0: 6106199786387371984
+      MapDDU Pipes_1: 8625598720360038738
+      MapDDU Pipes_10: 7670266455771487104
+      MapDDU Pipes_11: -8550611122702834993
+      MapDDU Pipes_12: 4962391578819692298
+      MapDDU Pipes_13: -6890367638473568677
+      MapDDU Pipes_14: 6888883685155795217
+      MapDDU Pipes_15: -6504388062668469871
+      MapDDU Pipes_16: 2553299800305635396
+      MapDDU Pipes_17: -1893672911842944125
+      MapDDU Pipes_18: -3929363589493769450
+      MapDDU Pipes_19: 8010283275898813213
+      MapDDU Pipes_2: -843981677944078776
+      MapDDU Pipes_3: -3021805114161878181
+      MapDDU Pipes_4: -6084069002149289309
+      MapDDU Pipes_5: -653827233816533946
+      MapDDU Pipes_6: 1977320378670920082
+      MapDDU Pipes_7: -336935507207674120
+      MapDDU Pipes_8: 5639756520926854003
+      MapDDU Pipes_9: -5855105815328721425
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
