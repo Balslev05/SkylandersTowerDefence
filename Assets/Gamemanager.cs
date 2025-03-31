@@ -1,10 +1,15 @@
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
+using System.Collections.Generic;
 
 public class Gamemanager : MonoBehaviour
 {
     public GameObject[] towers;
     public GameObject[] Spawners;
+
+    public List<GameObject> SpawnedTowers;
+    public List<GameObject> UsedSpawners;
 
 
 
@@ -12,15 +17,17 @@ public class Gamemanager : MonoBehaviour
     {
     
     }
-    public void SpawnTowers(int idTower, int IdPoints)
+    public void SpawnTowers(int idTower, int SpawnerID)
     {
-        SpawnTowers(idTower, 0, IdPoints);   
+        SpawnTowers(idTower, 0, SpawnerID);   
     }  
-    public void SpawnTowers(int idTower, int Upgrade, int IdPoints)
+    public void SpawnTowers(int idTower, int Upgrade, int SpawnerID)
     {
-        if (Spawners[IdPoints].GetComponent<SpawnPoint>().TowerPlaced) return;
-        Instantiate(towers[idTower], Spawners[IdPoints].transform.position, Quaternion.identity);
-        Spawners[IdPoints].GetComponent<SpawnPoint>().TowerPlaced = true;
+        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced) return;
+       GameObject tower = Instantiate(towers[idTower], Spawners[SpawnerID].transform.position, Quaternion.identity);
+        Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = true;
+        SpawnedTowers.Add(tower);
+        UsedSpawners.Add(Spawners[SpawnerID]);
     }  
 
     public void SelectTower(GameObject Spawner)
@@ -42,5 +49,24 @@ public class Gamemanager : MonoBehaviour
             } 
         }
     }
-    
+
+    public void DeselecTower(GameObject Spawner)
+    {
+        for (int i = 0; i < UsedSpawners.Count; i++)
+        {
+            if (UsedSpawners[i] == Spawner)
+            {
+                GameObject TowerTemp = SpawnedTowers[i];
+
+                SpawnedTowers.Remove(SpawnedTowers[i]);
+                UsedSpawners.Remove(UsedSpawners[i]);
+
+                Spawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
+                Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
+                Spawners[i].GetComponent<SpriteRenderer>().color = Color.red;
+                Spawners[i].transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f), 0.5f);
+                Destroy(TowerTemp);
+            }
+        }
+    }
 }
