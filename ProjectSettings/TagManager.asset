@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - WayPoint
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX
