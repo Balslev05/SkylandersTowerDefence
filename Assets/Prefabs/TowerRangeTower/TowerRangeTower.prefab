@@ -137,7 +137,8 @@ MonoBehaviour:
   ShootPoint: {fileID: 3881474238784053870}
   range: 10
   damage: 10
-  fireRate: 1
+  fireRate: 0.3
+  BulletSpeed: 3
   buildTime: 2
   OnHitSpawn: {fileID: 0}
   target: {fileID: 0}
