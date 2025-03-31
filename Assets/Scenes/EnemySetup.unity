@@ -1527,7 +1527,15 @@ MonoBehaviour:
   waves:
   - {fileID: 11400000, guid: c767fb730abe89b419b1bca3a837af76, type: 2}
   - {fileID: 11400000, guid: 2b34b3e2cee93a84cb8ffa5614ba5457, type: 2}
-  betweenWavesCooldown: 10
+  - {fileID: 11400000, guid: ef51e044d8df9fd4eb704a8c27d02114, type: 2}
+  - {fileID: 11400000, guid: 45fdbc929a51f334db4e4dd0bbe1796b, type: 2}
+  - {fileID: 11400000, guid: 6910592ee883de24385e18978542ffd8, type: 2}
+  - {fileID: 11400000, guid: 572f1286592ef864699955415d53948a, type: 2}
+  - {fileID: 11400000, guid: 86735af85d3d1a04fb2e72e45c19b48a, type: 2}
+  - {fileID: 11400000, guid: 4c2a3f71d23407048a3d49f1b195b491, type: 2}
+  - {fileID: 11400000, guid: 78bd76f6c4964d44a9ffd318e6e09d11, type: 2}
+  - {fileID: 11400000, guid: cec228988e196e0459630afcdd21297a, type: 2}
+  betweenWavesCooldown: 5
 --- !u!4 &1518624948
 Transform:
   m_ObjectHideFlags: 0

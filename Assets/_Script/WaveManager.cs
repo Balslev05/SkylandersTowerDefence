@@ -16,6 +16,7 @@ public class WaveManager : MonoBehaviour
     private void Start()
     {
         currentWave = 0;
+        Debug.Log($"Wave {currentWave} Incoming");
         StartCoroutine(StartBattle());
     }
 
@@ -46,7 +47,7 @@ public class WaveManager : MonoBehaviour
         currentWave++;
         if (currentWave < waves.Count)
         {
-            Debug.Log("Next Wave Incoming");
+            Debug.Log($"Wave {currentWave} Incoming");
             StartCoroutine(StartBattle());
         }
         else

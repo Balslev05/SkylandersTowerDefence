@@ -13,9 +13,10 @@ public class EnemyBase : MonoBehaviour
 
     [Header("Stats")]
     [SerializeField] private float maxHealth;
-    public float currentHealth;
+    [HideInInspector] public float currentHealth;
     public float moveSpeed;
     [SerializeField] private float damage;
+    [SerializeField] private float distanceToWayPointThreshold;
 
     private bool reachedEndPoint;
 
@@ -36,7 +37,7 @@ public class EnemyBase : MonoBehaviour
         //rb.MovePosition(transform.position + transform.forward * direction.normalized.magnitude * moveSpeed * Time.deltaTime);
         transform.Translate(direction.normalized * moveSpeed * Time.deltaTime, Space.World);
 
-        if (Vector2.Distance(transform.position, target.position) <= 0.2f)
+        if (Vector2.Distance(transform.position, target.position) <= distanceToWayPointThreshold)
         {
             GetNextWayPoint();
         }
