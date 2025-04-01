@@ -135,11 +135,12 @@ MonoBehaviour:
   Bulletprefab: {fileID: 6844150545549898088, guid: a4814548d2569654f9c93b4a090e8d0d, type: 3}
   ShootPoint: {fileID: 1522629804672725283}
   range: 5
-  damage: 20
+  damage: 0
   fireRate: 5
   BulletSpeed: 1.2
   buildTime: 2
   OnHitSpawn: {fileID: 7964889459092918624, guid: 2745045bc70719049a132aed04d72b8c, type: 3}
+  aimConst: 1.5
   target: {fileID: 0}
   canFire: 0
   upgrade1Price: 0

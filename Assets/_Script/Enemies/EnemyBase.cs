@@ -1,6 +1,8 @@
 using DG.Tweening;
 using UnityEngine;
-
+using UnityEngine.Animations;
+using DG.Tweening;
+using UnityEngine.Rendering;
 public class EnemyBase : MonoBehaviour
 {
     [Header("Components")]
@@ -9,7 +11,7 @@ public class EnemyBase : MonoBehaviour
     public WayPointManager wayPointManager;
     private int wayPointIndex = 0;
 
-    private Vector2 direction;
+    [HideInInspector] public Vector2 direction;
 
     [Header("Stats")]
     [SerializeField] private float maxHealth;
@@ -34,8 +36,11 @@ public class EnemyBase : MonoBehaviour
     private void Move()
     {
         direction = target.position - transform.position;
-        //rb.MovePosition(transform.position + transform.forward * direction.normalized.magnitude * moveSpeed * Time.deltaTime);
+
         transform.Translate(direction.normalized * moveSpeed * Time.deltaTime, Space.World);
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rb.rotation = angle;
 
         if (Vector2.Distance(transform.position, target.position) <= distanceToWayPointThreshold)
         {

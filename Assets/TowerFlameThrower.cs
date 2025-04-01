@@ -41,7 +41,7 @@ public class TowerFlameThrower : TowerBase
         Vector3 targetPosition = target.position + (Vector3)(Random.insideUnitCircle * 1.5f); 
 
         bullet.DOScale(startScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
-        bullet.DOMove(targetPosition, DistanceToTarget()).OnComplete(() => 
+        bullet.DOMove(CalculateTarget(), DistanceToTarget()).OnComplete(() => 
         {
             bulletRenderer.DOFade(0, 0.5f).OnComplete(() => Destroy(bullet.gameObject));
            //-----OnHit(bullet.gameObject);

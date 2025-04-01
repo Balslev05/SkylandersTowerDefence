@@ -13,6 +13,7 @@ public abstract class TowerBase : MonoBehaviour
     public float BulletSpeed = 0.0f;
     public int buildTime = 2;
     public GameObject OnHitSpawn;
+    public float aimConst = 1.0f;
     [HideInInspector] public Transform target;
     [HideInInspector] public bool canFire = false;
     [Header("UpgradePathWay 1")]
@@ -43,6 +44,22 @@ public abstract class TowerBase : MonoBehaviour
     {
         // DO SHIT HERE I THINK :=
     }
+    
+   public Vector2 CalculateTarget()
+{
+    Vector2 targetVelocity = target.GetComponent<EnemyBase>().direction.normalized;
+    Vector2 predictedPosition = (Vector2)target.position + targetVelocity * aimConst;
+
+    // Only use Lerp if the target is moving unpredictably
+    if (Vector2.Distance(transform.position, predictedPosition) < DistanceToTarget())
+    {
+        return Vector2.Lerp(transform.position, predictedPosition, DistanceToTarget() / Vector2.Distance(transform.position, predictedPosition));
+    }
+    
+    return predictedPosition;
+}
+
+
     public IEnumerator Build()
     {
         this.transform.localScale = new Vector3(0, 0, 0);
