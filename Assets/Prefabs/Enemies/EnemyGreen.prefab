@@ -77,6 +77,10 @@ PrefabInstance:
       value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: currencyValue
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: distanceToWayPointThreshold
       value: 0.2
       objectReference: {fileID: 0}
