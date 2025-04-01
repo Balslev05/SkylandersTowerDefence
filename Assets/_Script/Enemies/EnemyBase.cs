@@ -8,11 +8,12 @@ public class EnemyBase : MonoBehaviour
     public Transform target;
     public WayPointManager wayPointManager;
     private int wayPointIndex = 0;
+    public HealthBar healthBar;
 
     private Vector2 direction;
 
     [Header("Stats")]
-    [SerializeField] private float maxHealth;
+    [SerializeField] private int maxHealth;
     [HideInInspector] public float currentHealth;
     public float moveSpeed;
     [SerializeField] private float damage;
@@ -24,6 +25,7 @@ public class EnemyBase : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     private void FixedUpdate()

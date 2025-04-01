@@ -65,6 +65,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 8871813659474254352}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
@@ -85,3 +89,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+--- !u!114 &8871813659474254352 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3639494526337408232, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+  m_PrefabInstance: {fileID: 5304421747024070392}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508f9305a75170743b7f39c3c74bba6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,8 @@ public class Target : MonoBehaviour
     public void TakeDamage(float damage)
     {
         enemy.currentHealth -= damage;
+        enemy.healthBar.SetCurrentHealth(Mathf.FloorToInt(enemy.currentHealth));
+
 
         if (enemy.currentHealth <= 0)
         {

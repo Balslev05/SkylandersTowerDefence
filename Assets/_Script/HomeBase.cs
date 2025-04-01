@@ -3,16 +3,20 @@ using UnityEngine;
 public class HomeBase : MonoBehaviour
 {
     [SerializeField] private int maxHealth;
-    private float currentHealth;
+    public float currentHealth;
+
+    public HealthBar healthBar;
 
     private void Start()
     {
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(float damage)
     {
         currentHealth -= damage;
+        healthBar.SetCurrentHealth(Mathf.FloorToInt(currentHealth));
 
         if (currentHealth <= 0) { Die(); }
     }
