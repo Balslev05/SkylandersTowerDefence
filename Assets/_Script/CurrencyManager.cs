@@ -6,7 +6,7 @@ public class CurrencyManager : MonoBehaviour
     public TMP_Text currencyText;
     
     [SerializeField] private int startingCurrency;
-    public int currency;
+    private int currency;
 
     private void Start()
     {

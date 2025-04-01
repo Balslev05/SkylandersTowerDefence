@@ -46,7 +46,6 @@ public class WaveManager : MonoBehaviour
         }
         
         currencyManager.GetMoney(waves[currentWave].currencyValue);
-        //currencyManager.currency += waves[currentWave].currencyValue;
 
         yield return new WaitForSeconds(betweenWavesCooldown);
         currentWave++;
