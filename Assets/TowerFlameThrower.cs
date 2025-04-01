@@ -32,6 +32,7 @@ public class TowerFlameThrower : TowerBase
         Quaternion rotation = Quaternion.Euler(0, 0, angleOffset);
 
         Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, rotation).transform;
+        bullet.GetComponent<Bullet>().damage = damage;
         Vector3 startScale = bullet.localScale;
 
         SpriteRenderer bulletRenderer = bullet.GetComponent<SpriteRenderer>();
@@ -43,12 +44,13 @@ public class TowerFlameThrower : TowerBase
         bullet.DOMove(targetPosition, DistanceToTarget()).OnComplete(() => 
         {
             bulletRenderer.DOFade(0, 0.5f).OnComplete(() => Destroy(bullet.gameObject));
-           // OnHit(bullet.gameObject);
+           //-----OnHit(bullet.gameObject);
 
         });
     }
 
     StartCoroutine(reloade());
+    
 }
 
 
@@ -62,8 +64,7 @@ public class TowerFlameThrower : TowerBase
     public override void OnHit(GameObject Bullet)
     {
         Destroy(Bullet);
-      // target.GetComponent<Health>().TakeDamage(damage);
-      // POP UP EFFEKT HERE
+        if (OnHitSpawn != null)
         Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
     }
 }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3265236208738774912}
   - component: {fileID: 70233025367958142}
+  - component: {fileID: 7695577222255200061}
   - component: {fileID: 3379961780864467238}
   m_Layer: 0
   m_Name: Eksplosion
@@ -45,6 +46,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29351eaf689cedf4e84c758d3ad84106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 2.5
+--- !u!114 &7695577222255200061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7964889459092918624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec10a56b0b4d797448f9d2ba7a9eb069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!212 &3379961780864467238
 SpriteRenderer:
   m_ObjectHideFlags: 0

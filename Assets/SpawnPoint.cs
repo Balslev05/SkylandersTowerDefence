@@ -42,7 +42,7 @@ public class SpawnPoint : MonoBehaviour
         {
             gameManager.SelectTower(this.gameObject);
         }
-    }
+    }   
     
     public void Deselcted(GameObject Spawner)
     {

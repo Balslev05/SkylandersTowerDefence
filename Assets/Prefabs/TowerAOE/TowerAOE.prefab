@@ -132,13 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4967ff4e02299c64d9f004405af9334e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: AOE
   Bulletprefab: {fileID: 6844150545549898088, guid: a4814548d2569654f9c93b4a090e8d0d, type: 3}
   ShootPoint: {fileID: 1522629804672725283}
   range: 5
-  damage: 10
-  fireRate: 3
-  BulletSpeed: 0.5
+  damage: 20
+  fireRate: 5
+  BulletSpeed: 1.2
   buildTime: 2
   OnHitSpawn: {fileID: 7964889459092918624, guid: 2745045bc70719049a132aed04d72b8c, type: 3}
   target: {fileID: 0}
@@ -147,4 +146,4 @@ MonoBehaviour:
   upgrade1Prefab: {fileID: 0}
   upgrade2Price: 0
   upgrade2Prefab: {fileID: 0}
-  offsetScale: 1.3
+  offsetScale: 1.2

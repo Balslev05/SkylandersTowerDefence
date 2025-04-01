@@ -8,7 +8,7 @@ public abstract class TowerBase : MonoBehaviour
     public GameObject Bulletprefab;
     public Transform ShootPoint;
     public int range = 6;
-    public int damage = 10;
+    public float damage = 0.1f;
     public float fireRate = 1;
     public float BulletSpeed = 0.0f;
     public int buildTime = 2;

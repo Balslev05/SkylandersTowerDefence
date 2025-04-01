@@ -40,8 +40,7 @@ public class TowerSniper : TowerBase
     public override void OnHit(GameObject Bullet)
     {
         Destroy(Bullet);
-      // target.GetComponent<Health>().TakeDamage(damage);
-      // POP UP EFFEKT HERE
+        target.GetComponent<Target>().TakeDamage(damage);
         Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
     }
 }
