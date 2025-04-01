@@ -1,0 +1,645 @@
+fileFormatVersion: 2
+guid: 8dcfbd596291d8e4e8b104499b3e16cf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7550242959325652962
+    second: DDUTowersSoilders_0
+  - first:
+      213: -5104527461419013410
+    second: DDUTowersSoilders_1
+  - first:
+      213: 367264330103698455
+    second: DDUTowersSoilders_2
+  - first:
+      213: -234872408996510948
+    second: DDUTowersSoilders_3
+  - first:
+      213: 3245494642360305166
+    second: DDUTowersSoilders_4
+  - first:
+      213: -409021624573155155
+    second: DDUTowersSoilders_5
+  - first:
+      213: -5572307860418439173
+    second: DDUTowersSoilders_6
+  - first:
+      213: 2792226003319685997
+    second: DDUTowersSoilders_7
+  - first:
+      213: 5112190799735989915
+    second: DDUTowersSoilders_8
+  - first:
+      213: -2933241016637369722
+    second: DDUTowersSoilders_9
+  - first:
+      213: 7144898116151997505
+    second: DDUTowersSoilders_10
+  - first:
+      213: -5681335788909951901
+    second: DDUTowersSoilders_11
+  - first:
+      213: 8894866803821561143
+    second: DDUTowersSoilders_12
+  - first:
+      213: 8513404408447397632
+    second: DDUTowersSoilders_13
+  - first:
+      213: 1904948792371245569
+    second: DDUTowersSoilders_14
+  - first:
+      213: -1279562207703944157
+    second: DDUTowersSoilders_15
+  - first:
+      213: 5246647721682156876
+    second: DDUTowersSoilders_16
+  - first:
+      213: -1681345548923826220
+    second: DDUTowersSoilders_17
+  - first:
+      213: -8282836123482138596
+    second: DDUTowersSoilders_18
+  - first:
+      213: -504124521901660599
+    second: DDUTowersSoilders_19
+  - first:
+      213: -7928563585822018883
+    second: DDUTowersSoilders_20
+  - first:
+      213: -1220953992772129457
+    second: DDUTowersSoilders_21
+  - first:
+      213: 6254555226066141262
+    second: DDUTowersSoilders_22
+  - first:
+      213: -362327626582326855
+    second: DDUTowersSoilders_23
+  - first:
+      213: -3936737816469495065
+    second: DDUTowersSoilders_24
+  - first:
+      213: 4777239176172779851
+    second: DDUTowersSoilders_25
+  - first:
+      213: 4550672554820655672
+    second: DDUTowersSoilders_26
+  - first:
+      213: -7170473130187197591
+    second: DDUTowersSoilders_27
+  - first:
+      213: -1128162389617285990
+    second: DDUTowersSoilders_28
+  - first:
+      213: -6085552135842372210
+    second: DDUTowersSoilders_29
+  - first:
+      213: -7163737683993495911
+    second: DDUTowersSoilders_30
+  - first:
+      213: 6418186738965366036
+    second: DDUTowersSoilders_31
+  - first:
+      213: -802313770174464219
+    second: DDUTowersSoilders_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeadRanger
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1881
+        width: 671
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edaa4eb91531929b0800000000000000
+      internalID: -5104527461419013410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShotgunHead
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 1868
+        width: 259
+        height: 282
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c130936d9c09dbcf0800000000000000
+      internalID: -234872408996510948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperHead
+      rect:
+        serializedVersion: 2
+        x: 3393
+        y: 1856
+        width: 522
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e06c15e8e205a0d20800000000000000
+      internalID: 3245494642360305166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShotgunBody
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 1388
+        width: 385
+        height: 518
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d638a7491caffb620800000000000000
+      internalID: 2792226003319685997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmsRanger
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 818
+        width: 519
+        height: 981
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b96a842627622f640800000000000000
+      internalID: 5112190799735989915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RangerBody
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1302
+        width: 534
+        height: 564
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68259ba16d80b47d0800000000000000
+      internalID: -2933241016637369722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShotgunArms
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 1061
+        width: 354
+        height: 695
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144f8993bf6c72360800000000000000
+      internalID: 7144898116151997505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperBody
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 1253
+        width: 414
+        height: 519
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3640f447337d721b0800000000000000
+      internalID: -5681335788909951901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SniperArms
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 399
+        width: 518
+        height: 1335
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f60ca1430b52670800000000000000
+      internalID: 8513404408447397632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_RB
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 490
+        width: 284
+        height: 374
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b1004d71f0c8faf0800000000000000
+      internalID: -362327626582326855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_RM
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 578
+        width: 152
+        height: 287
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e22d7b40d5ed59c0800000000000000
+      internalID: -3936737816469495065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_RS
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 532
+        width: 42
+        height: 327
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49bbd648b92c4240800000000000000
+      internalID: 4777239176172779851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_BB
+      rect:
+        serializedVersion: 2
+        x: 1940
+        y: 515
+        width: 336
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a543ff39c372f30800000000000000
+      internalID: 4550672554820655672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_BM
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 554
+        width: 265
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96375bbcdac5d7c90800000000000000
+      internalID: -7170473130187197591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_BS
+      rect:
+        serializedVersion: 2
+        x: 2824
+        y: 655
+        width: 30
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94e7eda846f750f0800000000000000
+      internalID: -1128162389617285990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_GS
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 457
+        width: 72
+        height: 439
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e85eef83396cb8ba0800000000000000
+      internalID: -6085552135842372210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_GB
+      rect:
+        serializedVersion: 2
+        x: 3384
+        y: 219
+        width: 348
+        height: 688
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996fc71188a459c90800000000000000
+      internalID: -7163737683993495911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MF_GM
+      rect:
+        serializedVersion: 2
+        x: 3734
+        y: 274
+        width: 369
+        height: 599
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 415472685daf11950800000000000000
+      internalID: 6418186738965366036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 39f070915b990be49abd6b59018544bb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ArmsRanger: 5112190799735989915
+      DDUTowersSoilders_0: -7550242959325652962
+      DDUTowersSoilders_12: 8894866803821561143
+      DDUTowersSoilders_14: 1904948792371245569
+      DDUTowersSoilders_15: -1279562207703944157
+      DDUTowersSoilders_16: 5246647721682156876
+      DDUTowersSoilders_17: -1681345548923826220
+      DDUTowersSoilders_18: -8282836123482138596
+      DDUTowersSoilders_19: -504124521901660599
+      DDUTowersSoilders_2: 367264330103698455
+      DDUTowersSoilders_20: -7928563585822018883
+      DDUTowersSoilders_21: -1220953992772129457
+      DDUTowersSoilders_22: 6254555226066141262
+      DDUTowersSoilders_32: -802313770174464219
+      DDUTowersSoilders_5: -409021624573155155
+      DDUTowersSoilders_6: -5572307860418439173
+      HeadRanger: -5104527461419013410
+      MF_BB: 4550672554820655672
+      MF_BM: -7170473130187197591
+      MF_BS: -1128162389617285990
+      MF_GB: -7163737683993495911
+      MF_GM: 6418186738965366036
+      MF_GS: -6085552135842372210
+      MF_RB: -362327626582326855
+      MF_RM: -3936737816469495065
+      MF_RS: 4777239176172779851
+      RangerBody: -2933241016637369722
+      ShotgunArms: 7144898116151997505
+      ShotgunBody: 2792226003319685997
+      ShotgunHead: -234872408996510948
+      SniperArms: 8513404408447397632
+      SniperBody: -5681335788909951901
+      SniperHead: 3245494642360305166
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

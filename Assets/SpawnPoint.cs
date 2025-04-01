@@ -17,7 +17,7 @@ public class SpawnPoint : MonoBehaviour
         gameManager.SpawnTowers(ReadInput(), 0, transform.GetSiblingIndex());
         isSelected = false;
         transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f),0.5f);
-        this.GetComponent<SpriteRenderer>().color = Color.red;
+        this.GetComponent<SpriteRenderer>().color = Color.blue;
         TowerPlaced = true;
       }
     }
