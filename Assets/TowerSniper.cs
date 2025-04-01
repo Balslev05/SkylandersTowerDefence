@@ -32,7 +32,7 @@ public class TowerSniper : TowerBase
         bullet.rotation = Quaternion.Euler(0, 0, (angle-90));
         
         // Move towards the target
-        bullet.DOMove(CalculateTarget(), DistanceToTarget()).SetEase(Ease.OutQuint).OnComplete(() => OnHit(bullet.gameObject));
+        bullet.DOMove(CalculateTarget(), DistanceToTarget()/2).SetEase(Ease.OutQuint).OnComplete(() => OnHit(bullet.gameObject));
 
         StartCoroutine(reloade());
     }
