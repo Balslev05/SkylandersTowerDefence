@@ -20,6 +20,7 @@ public class EnemyBase : MonoBehaviour
     public float moveSpeed;
     [SerializeField] private float damage;
     [SerializeField] private float distanceToWayPointThreshold;
+    public int currencyValue;
 
     private bool reachedEndPoint;
 

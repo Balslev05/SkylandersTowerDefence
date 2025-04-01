@@ -7,5 +7,8 @@ public class Wave : ScriptableObject
     public List<GameObject> Enemies = new List<GameObject>();
 
     public List<bool> SpawnLeft = new List<bool>();
-    public float spawnDelay = 10f;
+
+    public float spawnDelay;
+
+    public int currencyValue;
 }

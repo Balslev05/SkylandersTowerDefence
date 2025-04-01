@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class WaveManager : MonoBehaviour
 {
+    [SerializeField] private CurrencyManager currencyManager;
+
     [SerializeField] private WayPointManager LeftWayPointManager;
     [SerializeField] private WayPointManager RightWayPointManager;
 
@@ -42,6 +44,8 @@ public class WaveManager : MonoBehaviour
 
             yield return new WaitForSeconds(waves[currentWave].spawnDelay);
         }
+        
+        currencyManager.GetMoney(waves[currentWave].currencyValue);
 
         yield return new WaitForSeconds(betweenWavesCooldown);
         currentWave++;
