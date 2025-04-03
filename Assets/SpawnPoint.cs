@@ -17,7 +17,6 @@ public class SpawnPoint : MonoBehaviour
         gameManager.SpawnTowers(ReadInput(), 0, transform.GetSiblingIndex());
         isSelected = false;
         transform.DOScale(new Vector3(1f, 1f, 1f),0.5f);
-        TowerPlaced = true;
       }
     }
 

@@ -27,8 +27,12 @@ public class Gamemanager : MonoBehaviour
     {
         CurrencyManager currencyManager = Manager.currencyManager;
 
-        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced && currencyManager.currency > towers[idTower].GetComponent<TowerBase>().TowerPrice) return;
-        
+        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced
+            || currencyManager.currency < towers[idTower].GetComponent<TowerBase>().TowerPrice)
+        {
+            Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = false;
+            return; }
+
         GameObject tower = Instantiate(towers[idTower], Spawners[SpawnerID].transform.position, Quaternion.identity);
         Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = true;
         SpawnedTowers.Add(tower);

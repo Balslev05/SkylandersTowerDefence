@@ -46,9 +46,9 @@ public class WaveManager : MonoBehaviour
             yield return new WaitForSeconds(waves[currentWave].spawnDelay);
         }
         
-        currencyManager.GetMoney(waves[currentWave].currencyValue);
-
         yield return new WaitForSeconds(betweenWavesCooldown);
+
+        currencyManager.GetMoney(waves[currentWave].currencyValue);
         currentWave++;
         if (currentWave < waves.Count)
         {
