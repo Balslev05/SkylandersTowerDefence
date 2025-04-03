@@ -33,12 +33,10 @@ public class WaveManager : MonoBehaviour
     {
         for (int i = 0; i < waves[currentWave].Enemies.Count; i++)
         {
-            if (waves[currentWave].SpawnLeft[i])
-            {
+            if (waves[currentWave].SpawnLeft[i]) {
                 Spawn(LeftWayPointManager, waves[currentWave].Enemies[i]);
             }
-            else
-            {
+            else {
                 Spawn(RightWayPointManager, waves[currentWave].Enemies[i]);
             }
 
@@ -49,13 +47,11 @@ public class WaveManager : MonoBehaviour
 
         yield return new WaitForSeconds(betweenWavesCooldown);
         currentWave++;
-        if (currentWave < waves.Count)
-        {
+        if (currentWave < waves.Count) {
             Debug.Log($"Wave {currentWave} Incoming");
             StartCoroutine(StartBattle());
         }
-        else
-        {
+        else {
             Debug.Log("Game Won");
         }
     }
