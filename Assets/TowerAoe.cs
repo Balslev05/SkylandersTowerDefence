@@ -29,7 +29,7 @@ public class TowerAoe : TowerBase
     
         bullet.DORotate(Vector3.forward * 360, 0.5f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1);
 
-        bullet.DOMove(CalculateTarget(), DistanceToTarget()).OnComplete(() => OnHit(bullet.gameObject));
+        bullet.DOMove(FindTarget(), DistanceToTarget()).OnComplete(() => OnHit(bullet.gameObject));
         
         StartCoroutine(reloade());
     }

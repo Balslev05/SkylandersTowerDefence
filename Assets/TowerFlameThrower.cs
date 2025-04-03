@@ -13,16 +13,25 @@ public class TowerFlameThrower : TowerBase
     }
     void Update()
     {
+
+        CheckTargetStatus();
+
+        if (target != null && IsLooking) LookAtTarget();
+
         CheckForEnemies();
 
-        if (target != null && canFire)
+        if (target != null) TurnToTarget();
+
+
+        if (target != null && canFire && IsLooking)
         {
             Fire();
-        } 
+        }
     }
 
     public override void Fire()
-{
+    {
+
     int numProjectiles = 5; 
     float baseSpread = fireSpreadAngele; 
 
@@ -41,7 +50,7 @@ public class TowerFlameThrower : TowerBase
         Vector3 targetPosition = target.position + (Vector3)(Random.insideUnitCircle * 1.5f); 
 
         bullet.DOScale(startScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
-        bullet.DOMove(CalculateTarget(), DistanceToTarget()).OnComplete(() => 
+        bullet.DOMove(FindTarget(), DistanceToTarget()).OnComplete(() => 
         {
             bulletRenderer.DOFade(0, 0.5f).OnComplete(() => Destroy(bullet.gameObject));
            //-----OnHit(bullet.gameObject);

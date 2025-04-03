@@ -22,6 +22,8 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] private float distanceToWayPointThreshold;
     public int currencyValue;
 
+
+    public int fromWave;
     private bool reachedEndPoint;
 
     private void Start()

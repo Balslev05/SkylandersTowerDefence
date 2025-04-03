@@ -22,11 +22,12 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(StartBattle());
     }
 
-    private void Spawn(WayPointManager SpawnPoint, GameObject enemy)
+    private void Spawn(WayPointManager SpawnPoint, GameObject enemy, int CurrentWave)
     {
         EnemyBase spawnedEnemy = Instantiate(enemy, SpawnPoint.spawnPoint, Quaternion.identity).GetComponent<EnemyBase>();
         spawnedEnemy.wayPointManager = SpawnPoint;
         spawnedEnemy.target = SpawnPoint.wayPoints[0];
+        spawnedEnemy.fromWave = CurrentWave;
     }
 
     private IEnumerator StartBattle()
@@ -35,11 +36,11 @@ public class WaveManager : MonoBehaviour
         {
             if (waves[currentWave].SpawnLeft[i])
             {
-                Spawn(LeftWayPointManager, waves[currentWave].Enemies[i]);
+                Spawn(LeftWayPointManager, waves[currentWave].Enemies[i], currentWave);
             }
             else
             {
-                Spawn(RightWayPointManager, waves[currentWave].Enemies[i]);
+                Spawn(RightWayPointManager, waves[currentWave].Enemies[i], currentWave);;
             }
 
             yield return new WaitForSeconds(waves[currentWave].spawnDelay);

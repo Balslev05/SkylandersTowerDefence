@@ -16,26 +16,22 @@ public class Rangers : TowerBase
 
     void Update()
     {
+        CheckTargetStatus();
+
+        if (target != null && IsLooking) LookAtTarget();
+
         CheckForEnemies();
 
-        if (target != null && canFire)
+        if (target != null) TurnToTarget();
+
+
+        if (target != null && canFire && IsLooking)
         {
             Fire();
-        } 
+        }
     }
-
-    public void LookAtTarget()
-{
-    Vector2 direction = (target.transform.position - transform.position).normalized;
-    float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-    rb.rotation = angle - 90f; // Subtract 90 degrees if your sprite's "up" is not aligned with the default forward direction
-}
-
-
    public override void Fire()
-{
-    LookAtTarget();
-
+    {
     for (int i = 0; i < AmountOfBullets; i++)
     {   
         Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
@@ -60,5 +56,13 @@ public class Rangers : TowerBase
         Destroy(Bullet);
         if (OnHitSpawn != null)
         Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
+    }
+
+
+    public void secondaryFire(){
+        Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
+        bullet.GetComponent<Bullet>().damage = damage;
+        bullet.GetComponent<Bullet>().bulletSpeed = Random.Range(1, randomSpeed + 1);
+        bullet.GetComponent<Bullet>().SetDirection(bullet.up);
     }
 }
