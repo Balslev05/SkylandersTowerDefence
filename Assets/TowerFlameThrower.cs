@@ -52,7 +52,7 @@ public class TowerFlameThrower : TowerBase
         bullet.DOScale(startScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
         bullet.DOMove(FindTarget(), DistanceToTarget()).OnComplete(() => 
         {
-            bulletRenderer.DOFade(0, 0.5f).OnComplete(() => Destroy(bullet.gameObject));
+            bulletRenderer.DOFade(0, 0.25f).OnComplete(() => Destroy(bullet.gameObject));
            //-----OnHit(bullet.gameObject);
 
         });

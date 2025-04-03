@@ -11,9 +11,16 @@ public class TowerAoe : TowerBase
     }
     void Update()
     {
+        CheckTargetStatus();
+
+        if (target != null && IsLooking) LookAtTarget();
+
         CheckForEnemies();
 
-        if (target != null && canFire)
+        if (target != null) TurnToTarget();
+
+
+        if (target != null && canFire && IsLooking)
         {
             Fire();
         }
