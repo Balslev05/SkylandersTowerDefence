@@ -32,7 +32,7 @@ public class Rangers : TowerBase
     }
    public override void Fire()
     {
-        
+
     for (int i = 0; i < AmountOfBullets; i++)
     {   
         Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;

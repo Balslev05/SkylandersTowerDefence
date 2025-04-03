@@ -11,6 +11,7 @@ public abstract class TowerBase : MonoBehaviour
     public Transform ShootPoint;
     public GameObject OnHitSpawn;
     [Header("Stats")]
+    public int TowerPrice = 70;
     public int range = 6;
     public float damage = 0.1f;
     public float fireRate = 1;
@@ -19,6 +20,7 @@ public abstract class TowerBase : MonoBehaviour
     public float aimConst = 1.0f;
     public float turningSpeed = 0.4f;
     [Header("Bools")]
+    public bool FinishBuilded = false;
     public bool canFire = false;
     public bool IsLooking = false;
     [Header("UpgradePathWay 1")]
@@ -64,7 +66,7 @@ public abstract class TowerBase : MonoBehaviour
 
     public void TurnToTarget()
     {
-        if (target == null)
+        if (target == null || !FinishBuilded)
         {
             return;
         }
@@ -73,7 +75,7 @@ public abstract class TowerBase : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         rb.DORotate(angle - 90f, turningSpeed).onComplete += () => IsLooking = true;
     }
-    
+
     public void LookAtTarget()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -98,10 +100,12 @@ public abstract class TowerBase : MonoBehaviour
 
     public IEnumerator Build()
     {
-        this.transform.localScale = new Vector3(0, 0, 0);
-        this.transform.DOScale(1, buildTime);
+        this.transform.localScale = new Vector3(10, 10, 10);
+        this.transform.DOScale(1, buildTime).SetEase(Ease.Linear);
         yield return new WaitForSeconds(buildTime);
+        CameraShake.Shake(0.5f, 0.5f);
         canFire = true;
+        FinishBuilded = true;
     }
 
     public IEnumerator reloade()

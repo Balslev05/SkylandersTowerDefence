@@ -11,11 +11,13 @@ public class Gamemanager : MonoBehaviour
     public List<GameObject> SpawnedTowers;
     public List<GameObject> UsedSpawners;
 
+    private Manager Manager;
+
 
 
     public void Start()
     {
-    
+        Manager = GameObject.FindWithTag("Manager").GetComponent<Manager>();
     }
     public void SpawnTowers(int idTower, int SpawnerID)
     {
@@ -23,11 +25,16 @@ public class Gamemanager : MonoBehaviour
     }  
     public void SpawnTowers(int idTower, int Upgrade, int SpawnerID)
     {
-        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced) return;
-       GameObject tower = Instantiate(towers[idTower], Spawners[SpawnerID].transform.position, Quaternion.identity);
+        CurrencyManager currencyManager = Manager.currencyManager;
+
+        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced && currencyManager.currency > towers[idTower].GetComponent<TowerBase>().TowerPrice) return;
+        
+        GameObject tower = Instantiate(towers[idTower], Spawners[SpawnerID].transform.position, Quaternion.identity);
         Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = true;
         SpawnedTowers.Add(tower);
         UsedSpawners.Add(Spawners[SpawnerID]);
+
+        currencyManager.LoseMoney(tower.GetComponent<TowerBase>().TowerPrice);
     }  
 
     public void SelectTower(GameObject Spawner)
@@ -37,15 +44,13 @@ public class Gamemanager : MonoBehaviour
             if (Spawners[i] == Spawner)
             {
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = true;
-                Spawners[i].GetComponent<SpriteRenderer>().color = Color.green;
-                Spawners[i].transform.DOScale(new Vector3(2.2f, 2.2f, 2.2f), 0.5f);
+                Spawners[i].transform.DOScale(new Vector3(1.3f, 1.3f, 1.3f), 0.5f);
 
             } 
             else
             {
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
-                Spawners[i].GetComponent<SpriteRenderer>().color = Color.blue;
-                Spawners[i].transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f), 0.5f);
+                Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
             } 
         }
     }
@@ -61,8 +66,7 @@ public class Gamemanager : MonoBehaviour
 
                 Spawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
-                Spawners[i].GetComponent<SpriteRenderer>().color = Color.blue;
-                Spawners[i].transform.DOScale(new Vector3(1.7f, 1.7f, 1.7f), 0.5f);
+                Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
                 
                 SpawnedTowers.Remove(SpawnedTowers[i]);
                 UsedSpawners.Remove(UsedSpawners[i]);
