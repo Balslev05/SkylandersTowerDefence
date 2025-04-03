@@ -183,7 +183,7 @@ MonoBehaviour:
   target: {fileID: 0}
   Bulletprefab: {fileID: 5050035520650213461, guid: 785b43c3a5a1c354fbc1e5238150aa5a, type: 3}
   ShootPoint: {fileID: 23658214}
-  OnHitSpawn: {fileID: 0}
+  OnHitSpawn: {fileID: 7964889459092918624, guid: 2745045bc70719049a132aed04d72b8c, type: 3}
   range: 5
   damage: 1
   fireRate: 2
@@ -6035,7 +6035,7 @@ Transform:
   m_GameObject: {fileID: 5408336253412208631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.67, y: 8.93, z: -0.052426193}
+  m_LocalPosition: {x: -0.91, y: 9.33, z: -0.052426193}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -6203,12 +6203,12 @@ MonoBehaviour:
   ShootPoint: {fileID: 948703716}
   OnHitSpawn: {fileID: 0}
   range: 6
-  damage: 0.025
+  damage: 0.05
   fireRate: 0.1
   BulletSpeed: 0.4
   buildTime: 2
   aimConst: 1.3
-  turningSpeed: 0.3
+  turningSpeed: 0.2
   canFire: 0
   IsLooking: 0
   upgrade1Price: 0

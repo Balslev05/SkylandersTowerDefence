@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
     [HideInInspector] public float bulletSpeed = 0;
     public bool destroyOnHit = false;
     private Vector2 moveDirection;
+    
 
     public void SetDirection(Vector2 direction)
     {
