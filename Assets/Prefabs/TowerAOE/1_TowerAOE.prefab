@@ -205,7 +205,7 @@ MonoBehaviour:
   TowerPrice: 100
   range: 5
   damage: 0
-  fireRate: 5
+  fireRate: 4
   BulletSpeed: 1.2
   buildTime: 1
   aimConst: 1.5
@@ -213,8 +213,8 @@ MonoBehaviour:
   FinishBuilded: 0
   canFire: 0
   IsLooking: 0
-  upgrade1Price: 0
-  upgrade1Prefab: {fileID: 0}
+  upgrade1Price: 240
+  upgrade1Prefab: {fileID: 5219305799753768360, guid: 8f67146c13da97e4298d5802ba03b85e, type: 3}
   upgrade2Price: 0
   upgrade2Prefab: {fileID: 0}
   offsetScale: 1.2
