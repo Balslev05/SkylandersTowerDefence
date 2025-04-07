@@ -456,6 +456,14 @@ PrefabInstance:
       value: 0.9294118
       objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: ArmL
+      value: 
+      objectReference: {fileID: 6110651843218456824}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: ArmR
+      value: 
+      objectReference: {fileID: 2311993810224805284}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: Arms
       value: 
       objectReference: {fileID: 6110651843218456824}

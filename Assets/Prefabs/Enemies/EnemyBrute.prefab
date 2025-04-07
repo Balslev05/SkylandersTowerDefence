@@ -224,11 +224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomzieZombie: 1
+  animateZombie: 0
   Hair: {fileID: 969193187213925114}
   Head: {fileID: 554069104357197170}
   Body: {fileID: 3015382900312330402}
-  ArmR: {fileID: 0}
-  ArmL: {fileID: 0}
+  ArmR: {fileID: 4925652937733139529}
+  ArmL: {fileID: 5594939025275238306}
   ListOfHair:
   - {fileID: -630262368720361365, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
   - {fileID: -7541905695249787702, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
