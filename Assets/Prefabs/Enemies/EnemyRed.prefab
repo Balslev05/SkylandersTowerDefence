@@ -456,6 +456,14 @@ PrefabInstance:
       value: 0.9294118
       objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: ArmL
+      value: 
+      objectReference: {fileID: 6110651843218456824}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: ArmR
+      value: 
+      objectReference: {fileID: 2311993810224805284}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: Arms
       value: 
       objectReference: {fileID: 6110651843218456824}
@@ -480,16 +488,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2311993810224805284}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: floatDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: RandomzieZombie
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: ListOfBody.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: ListOfHair.Array.size
-      value: 8
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: ListOfHead.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: ListOfArmsL.Array.size
@@ -497,7 +513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: ListOfArmsR.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfBody.Array.data[0]'
@@ -546,7 +562,7 @@ PrefabInstance:
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfHead.Array.data[1]'
       value: 
-      objectReference: {fileID: -4360588190112993369, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
+      objectReference: {fileID: -3788797482063945738, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfHead.Array.data[2]'
       value: 
@@ -574,15 +590,15 @@ PrefabInstance:
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfArmsR.Array.data[0]'
       value: 
-      objectReference: {fileID: 7647954893817037131, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
+      objectReference: {fileID: 7435791811889813069, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfArmsR.Array.data[1]'
       value: 
-      objectReference: {fileID: 7435791811889813069, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
+      objectReference: {fileID: -4075379173800860978, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfArmsR.Array.data[2]'
       value: 
-      objectReference: {fileID: -4075379173800860978, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfArmsR.Array.data[3]'
       value: 
