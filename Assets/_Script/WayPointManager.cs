@@ -3,7 +3,9 @@ using UnityEngine;
 public class WayPointManager : MonoBehaviour
 {
     public Transform[] wayPoints;
+
     public Vector2 spawnPoint;
+
     public float totalDistance = 0;
 
     void Awake()
@@ -17,6 +19,7 @@ public class WayPointManager : MonoBehaviour
         }
     }
 
+
     public void FindDistanceWalked()
     {
         totalDistance = 0;
@@ -25,4 +28,5 @@ public class WayPointManager : MonoBehaviour
             totalDistance += Vector2.Distance(wayPoints[i].position, wayPoints[i + 1].position);
         }
     }
+
 }

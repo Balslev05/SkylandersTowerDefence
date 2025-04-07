@@ -9,6 +9,7 @@ public class TowerFlameThrower : TowerBase
 
     void Start()
     {
+        manager = GameObject.FindWithTag("Manager").GetComponent<Manager>();
         StartCoroutine(Build());
     }
     void Update()

@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 3219002088903176632}
   - component: {fileID: -511227246553297881}
   m_Layer: 0
-  m_Name: RealTowerAOE
+  m_Name: 1_TowerAOE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   target: {fileID: 0}
   Bulletprefab: {fileID: 6844150545549898088, guid: a4814548d2569654f9c93b4a090e8d0d, type: 3}
   ShootPoint: {fileID: 6661321564512193957}
-  OnHitSpawn: {fileID: 7964889459092918624, guid: 2745045bc70719049a132aed04d72b8c, type: 3}
+  OnHitSpawn: {fileID: 7964889459092918624, guid: 193399d1c50d72b4696afa8955529b63, type: 3}
   TowerPrice: 100
   range: 5
   damage: 0

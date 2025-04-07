@@ -5,22 +5,30 @@ public class SpawnPoint : MonoBehaviour
     public Gamemanager gameManager;
     public bool isSelected = false;
     public bool TowerPlaced = false;
+    public bool Upgradebel = false;
     
     void Start()
     {
+
     }
 
     void Update()
-    {
-      if (isSelected && ReadInput() != -1)
+    {  
+        if (Upgradebel && ReadUpgradeInput() != -1)
+        {
+            gameManager.FindUpgradeTower(gameObject, ReadUpgradeInput());
+            GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
+      if (isSelected && ReadInputSpawnInput() != -1)
       {
-        gameManager.SpawnTowers(ReadInput(), 0, transform.GetSiblingIndex());
+        gameManager.SpawnTowers(ReadInputSpawnInput(), 0, transform.GetSiblingIndex());
         isSelected = false;
         transform.DOScale(new Vector3(1f, 1f, 1f),0.5f);
       }
     }
 
-    public int ReadInput()
+    public int ReadInputSpawnInput()
     {
         string input = UnityEngine.Input.inputString; 
         int result;
@@ -32,6 +40,18 @@ public class SpawnPoint : MonoBehaviour
         
         return -1; // Return -1 as an error indicator
     }
+     public int ReadUpgradeInput()
+    {
+        string input = UnityEngine.Input.inputString; 
+        int result;
+
+        if (int.TryParse(input, out result) && result > 0 && result < 3) 
+        {
+            return result;
+        }
+        
+        return -1; // Return -1 as an error indicator
+    }
 
     
 
@@ -39,6 +59,13 @@ public class SpawnPoint : MonoBehaviour
         if (TowerPlaced == false)
         {
             gameManager.SelectTower(this.gameObject);
+        }
+
+        if (TowerPlaced)
+        {
+            gameManager.SelectTower(this.gameObject);
+            this.GetComponent<SpriteRenderer>().color = Color.green;
+            Upgradebel = true;
         }
     }   
     

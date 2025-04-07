@@ -30,8 +30,14 @@ public abstract class TowerBase : MonoBehaviour
     public int upgrade2Price = 0;
     public GameObject upgrade2Prefab;
 
+    protected Manager manager;
     public abstract void Fire();
     public abstract void OnHit(GameObject Bullet);
+
+    void Start()
+    {
+       
+    }
 
     public void CheckForEnemies()
     {
@@ -130,5 +136,20 @@ public abstract class TowerBase : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
-    
+    public void UpgradeTower(int idUpgradePathWay, Transform SpawnerID)
+    {        
+        if (idUpgradePathWay == 1)
+        {
+            GameObject tower = Instantiate(upgrade1Prefab, SpawnerID.position, Quaternion.identity);
+            manager.currencyManager.LoseMoney(upgrade1Price);
+            SpawnerID.GetComponent<SpawnPoint>().TowerPlaced = true;
+            SpawnerID.GetComponent<SpawnPoint>().Upgradebel = true;
+            manager.gamemanager.SpawnedTowers.Add(tower);
+        }
+        else if (idUpgradePathWay == 2)
+        {
+            Debug.Log("Upgrade 2");
+            SpawnerID.GetComponent<SpawnPoint>().TowerPlaced = true;
+        }
+    }
 }

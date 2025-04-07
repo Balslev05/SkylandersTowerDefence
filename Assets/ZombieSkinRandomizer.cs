@@ -3,6 +3,7 @@ using DG.Tweening;
 public class ZombieSkinRandomizer : MonoBehaviour
 {
     public bool RandomzieZombie = false;
+    public bool animateZombie = false;
     [Header("Zombie Parts")]
     public GameObject Hair;
     public GameObject Head;
@@ -27,7 +28,10 @@ public class ZombieSkinRandomizer : MonoBehaviour
         {
             RandomizedSkin(); 
         }
-       AnimateZombie();
+        if (animateZombie)
+        {
+            AnimateZombie();
+        }
     }
 
     void Update()
@@ -65,5 +69,13 @@ public class ZombieSkinRandomizer : MonoBehaviour
             ArmL.transform.DOLocalRotate(new Vector3(0, 0, -armSwingAmount), armSwingDuration, RotateMode.LocalAxisAdd)
                 .SetLoops(-1, LoopType.Yoyo)
                 .SetEase(Ease.InOutSine);
+          /*   // Change the sprite render to a bit darker so that it looks like they go up and down using dotween Set to loop
+            foreach (Transform child in transform){
+                child.GetComponent<SpriteRenderer>().DOColor(new Color(0.9f, 0.9f, 0.9f, 0.9f), 0.25f).onComplete += ()
+                => child.GetComponent<SpriteRenderer>().DOColor(new Color(1f, 1f, 1f, 1f), 0.25f).SetLoops(-1, LoopType.Yoyo);
+            }
+
+            transform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), 0.25f).onComplete += ()
+            => transform.DOScale(new Vector3(1f, 1f, 1f), 0.25f).SetLoops(-1, LoopType.Yoyo); */
         }
     }

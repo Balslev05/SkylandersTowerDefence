@@ -10,6 +10,7 @@ public class Rangers : TowerBase
 
     void Start()
     {
+        manager = GameObject.FindWithTag("Manager").GetComponent<Manager>();
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(Build());
     }
@@ -46,6 +47,8 @@ public class Rangers : TowerBase
 
         // Set direction properly so bullets move correctly
         bullet.GetComponent<Bullet>().SetDirection(bullet.up);
+
+        Destroy(bullet.gameObject, 2.5f);
     }
     
     StartCoroutine(reloade());
