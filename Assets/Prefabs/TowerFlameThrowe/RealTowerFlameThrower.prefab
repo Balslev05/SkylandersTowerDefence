@@ -267,13 +267,14 @@ MonoBehaviour:
   buildTime: 2
   aimConst: 1.3
   turningSpeed: 0.2
+  FinishBuilded: 0
   canFire: 0
   IsLooking: 0
   upgrade1Price: 0
   upgrade1Prefab: {fileID: 0}
   upgrade2Price: 0
   upgrade2Prefab: {fileID: 0}
-  offsetScale: 3
+  offsetScale: 1.5
   FlameGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.84304345, b: 0, a: 1}

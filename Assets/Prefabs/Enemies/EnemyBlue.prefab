@@ -244,7 +244,6 @@ MonoBehaviour:
   ListOfBody:
   - {fileID: 3374986336900760756, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
   - {fileID: -6604960116050576513, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
-  - {fileID: 0}
   ListOfArmsR:
   - {fileID: 7435791811889813069, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
   - {fileID: -4075379173800860978, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
@@ -547,6 +546,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -585,6 +596,10 @@ PrefabInstance:
     - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: damage
