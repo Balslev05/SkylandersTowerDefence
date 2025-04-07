@@ -9,16 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5989921589824966528, guid: 89d7ac6f16b2c05429f8e124ea9120ea, type: 3}
+    - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.b
-      value: 0.015686275
+      value: 0.44968545
       objectReference: {fileID: 0}
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.g
-      value: 0.63529414
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.r
-      value: 0.43921572
+      value: 0.5529185
       objectReference: {fileID: 0}
     - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,8 +65,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: bounty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: damage
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: healthBar
@@ -70,11 +78,15 @@ PrefabInstance:
       objectReference: {fileID: 8871813659474254352}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: maxHealth
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: moveSpeed
-      value: 1.8
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: AttackRate
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: currencyValue
@@ -82,11 +94,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: distanceToWayPointThreshold
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7979428467619501736, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Name
-      value: EnemyGreen
+      value: EnemyDeathWorm
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

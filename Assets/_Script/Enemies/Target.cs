@@ -36,7 +36,7 @@ public class Target : MonoBehaviour
 
     private void Die()
     {
-        currencyManager.GetMoney(enemy.currencyValue);
+        currencyManager.GetMoney(enemy.bounty);
         Destroy(this.gameObject);
     }
 

@@ -9,16 +9,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4391511774015240897, guid: f42b0d23e4ffd014caafba80a5225067, type: 3}
+    - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.b
-      value: 0.019607844
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.g
-      value: 0.8196079
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.r
-      value: 0.9921569
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,8 +65,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: bounty
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: damage
-      value: 4
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: healthBar
@@ -70,23 +78,31 @@ PrefabInstance:
       objectReference: {fileID: 113624740185817757}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: maxHealth
-      value: 40
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: moveSpeed
-      value: 3.2
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: AttackRate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: currencyValue
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: physicalResistance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: distanceToWayPointThreshold
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7979428467619501736, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Name
-      value: EnemyYellow
+      value: EnemyCatapult
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

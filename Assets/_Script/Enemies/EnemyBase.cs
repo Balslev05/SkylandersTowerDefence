@@ -23,7 +23,7 @@ public class EnemyBase : MonoBehaviour
     public float moveSpeed;
     [SerializeField] private int damage;
     [SerializeField] private float AttackRate;
-    public int currencyValue;
+    public int bounty;
     [SerializeField] private float distanceToWayPointThreshold;
     private bool reachedEndPoint;
 
