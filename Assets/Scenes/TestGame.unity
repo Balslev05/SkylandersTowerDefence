@@ -3283,6 +3283,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c2a3f71d23407048a3d49f1b195b491, type: 2}
   - {fileID: 11400000, guid: 78bd76f6c4964d44a9ffd318e6e09d11, type: 2}
   - {fileID: 11400000, guid: cec228988e196e0459630afcdd21297a, type: 2}
+  - {fileID: 11400000, guid: 1b91916a7407e574fbd8e7698f851dd9, type: 2}
   betweenWavesCooldown: 15
 --- !u!4 &1518624948
 Transform:
