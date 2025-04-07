@@ -1,8 +1,11 @@
 using UnityEngine;
+
 using DG.Tweening;
 public class Eksplosion : MonoBehaviour
 {
     public float scale = 1.5f;
+    public float FireMarksTime = 0.5f;
+    public GameObject FiremarksPrefab;
 
     void Start()
     {
@@ -20,5 +23,14 @@ public class Eksplosion : MonoBehaviour
     void Update()
     {
         
+    }
+    public void LeaveFireMarks()
+    {
+        Destroy(gameObject);
+        GameObject Firemarks = Instantiate(FiremarksPrefab, transform.position, Quaternion.identity);
+
+        Firemarks.transform.DOScale(scale, FireMarksTime).SetEase(Ease.OutExpo).OnComplete(() => 
+        Firemarks.transform.DOScale(0, FireMarksTime).SetEase(Ease.InExpo)).onComplete += () => Destroy(Firemarks);
+
     }
 }

@@ -24,6 +24,7 @@ public class Bullet : MonoBehaviour
         {
             Debug.Log("Hit");
             collision.GetComponent<Target>().TakeDamage(damage);
+            damage = 0;
             if (destroyOnHit)
             {
                 Destroy(gameObject);

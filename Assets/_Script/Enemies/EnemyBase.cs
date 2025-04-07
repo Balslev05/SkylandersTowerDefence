@@ -23,6 +23,10 @@ public class EnemyBase : MonoBehaviour
     public int currencyValue;
 
 
+
+
+
+
     public int fromWave;
     private bool reachedEndPoint;
 

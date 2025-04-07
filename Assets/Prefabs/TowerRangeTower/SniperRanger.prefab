@@ -317,7 +317,7 @@ MonoBehaviour:
   ShootPoint: {fileID: 5278860922003145224}
   OnHitSpawn: {fileID: 0}
   TowerPrice: 70
-  range: 12
+  range: 15
   damage: 25
   fireRate: 5
   BulletSpeed: 10

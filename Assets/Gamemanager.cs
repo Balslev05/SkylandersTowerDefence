@@ -14,6 +14,19 @@ public class Gamemanager : MonoBehaviour
     private Manager Manager;
 
 
+    void Update()
+    {
+        //fastForward
+        if (Input.GetKeyDown("space"))
+        {
+            Time.timeScale = 5;
+        }
+        else if (Input.GetKeyUp("space"))
+        {
+            Time.timeScale = 1;
+        }
+    }
+
 
     public void Start()
     {
@@ -27,11 +40,10 @@ public class Gamemanager : MonoBehaviour
     {
         CurrencyManager currencyManager = Manager.currencyManager;
 
-        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced
-            || currencyManager.currency < towers[idTower].GetComponent<TowerBase>().TowerPrice)
+        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced|| currencyManager.currency < towers[idTower].GetComponent<TowerBase>().TowerPrice)
         {
-            Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = false;
-            return; }
+            //Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = false;
+        return; }
 
         GameObject tower = Instantiate(towers[idTower], Spawners[SpawnerID].transform.position, Quaternion.identity);
         Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = true;
@@ -53,7 +65,9 @@ public class Gamemanager : MonoBehaviour
             } 
             else
             {
+                Spawners[i].GetComponent<SpriteRenderer>().color = Color.white;
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
+                Spawners[i].GetComponent<SpawnPoint>().Upgradebel = false;
                 Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
             } 
         }
@@ -68,13 +82,32 @@ public class Gamemanager : MonoBehaviour
                 GameObject TowerTemp = SpawnedTowers[i];
 
 
-                Spawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
+                //sSpawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
+                Spawners[i].GetComponent<SpawnPoint>().Upgradebel = false;
+                Spawners[i].GetComponent<SpriteRenderer>().color = Color.white;
                 Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
                 
                 SpawnedTowers.Remove(SpawnedTowers[i]);
                 UsedSpawners.Remove(UsedSpawners[i]);
                 Destroy(TowerTemp);
+            }
+        }
+    }
+    
+    public void FindUpgradeTower(GameObject Spawner, int Upgrade)
+    {
+        for (int i = 0; i < UsedSpawners.Count; i++)
+        {
+            if (UsedSpawners[i] == Spawner)
+            {
+                Debug.Log("Found the spawner");
+                GameObject TowerTemp = SpawnedTowers[i];
+                Debug.Log("Found the tower");
+                TowerTemp.GetComponent<TowerBase>().UpgradeTower(Upgrade, Spawner.transform);
+                Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
+                SpawnedTowers.Remove(SpawnedTowers[i]);
+                Destroy(TowerTemp); 
             }
         }
     }
