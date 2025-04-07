@@ -224,11 +224,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomzieZombie: 1
+  animateZombie: 0
   Hair: {fileID: 969193187213925114}
   Head: {fileID: 554069104357197170}
   Body: {fileID: 3015382900312330402}
-  ArmR: {fileID: 0}
-  ArmL: {fileID: 0}
+  ArmR: {fileID: 4925652937733139529}
+  ArmL: {fileID: 5594939025275238306}
   ListOfHair:
   - {fileID: -630262368720361365, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
   - {fileID: -7541905695249787702, guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca, type: 3}
@@ -606,8 +607,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: bounty
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: damage
-      value: 2
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: healthBar
@@ -615,15 +620,23 @@ PrefabInstance:
       objectReference: {fileID: 6124807386441769947}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: moveSpeed
-      value: 1.4
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: AttackRate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: currencyValue
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: elementalResistance
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: distanceToWayPointThreshold
@@ -639,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979428467619501736, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Name
-      value: EnemyBlue
+      value: EnemyBrute
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

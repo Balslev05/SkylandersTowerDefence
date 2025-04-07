@@ -14,11 +14,19 @@ public class Target : MonoBehaviour
         
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(float physicalDamage, float elementalDamage)
     {
-        enemy.currentHealth -= damage;
-        enemy.healthBar.SetCurrentHealth(Mathf.FloorToInt(enemy.currentHealth));
+        // Reducer skade baseret på enemy resistans
+        float physicalDamageReduction = enemy.physicalResistance / 100;
+        float reducedPhysicalDamage = physicalDamage * (1 - physicalDamageReduction);
 
+        float elementalDamageReduction = enemy.elementalResistance / 100;
+        float reducedElementalDamage = elementalDamage * (1 - elementalDamageReduction);
+
+        float totalDamage = reducedPhysicalDamage + reducedElementalDamage;
+
+        enemy.currentHealth -= totalDamage;
+        enemy.healthBar.SetCurrentHealth(Mathf.FloorToInt(enemy.currentHealth));
 
         if (enemy.currentHealth <= 0)
         {
@@ -28,7 +36,7 @@ public class Target : MonoBehaviour
 
     private void Die()
     {
-        currencyManager.GetMoney(enemy.currencyValue);
+        currencyManager.GetMoney(enemy.bounty);
         Destroy(this.gameObject);
     }
 

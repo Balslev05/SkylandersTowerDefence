@@ -9,16 +9,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 424513172788052478, guid: fcf5c816ee892e744b1ce8fd17b2d441, type: 3}
+    - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.b
-      value: 0.34509805
+      value: 0.34276712
       objectReference: {fileID: 0}
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.g
-      value: 0.27450982
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1057806955546297555, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Color.r
-      value: 0.93725497
+      value: 0.49786738
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6700185481574369199, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61,8 +69,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: bounty
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: damage
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: healthBar
@@ -70,11 +82,15 @@ PrefabInstance:
       objectReference: {fileID: 5275274070370336607}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: maxHealth
-      value: 50
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: moveSpeed
-      value: 3.5
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: AttackRate
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: currencyValue
@@ -82,11 +98,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: distanceToWayPointThreshold
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7979428467619501736, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_Name
-      value: EnemyPink
+      value: EnemyZnoopDoggy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

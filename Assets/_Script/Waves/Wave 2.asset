@@ -13,41 +13,26 @@ MonoBehaviour:
   m_Name: Wave 2
   m_EditorClassIdentifier: 
   Enemies:
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
   - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
   - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
   - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
   - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
   - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
   - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  - {fileID: 885285525093355421, guid: 85bc10cf4f77dce4f97d4e8ee3689ed5, type: 3}
-  SpawnLeft: 0000000000010101010100000000000101010101000000000001010101010000000000
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  - {fileID: 2819685008953020496, guid: 0f6792ece02b0664ab86e8839d5fbef8, type: 3}
+  SpawnLeft: 0101000101000101000101000101000101000101
   spawnDelay: 1
-  currencyValue: 110
+  currencyValue: 100

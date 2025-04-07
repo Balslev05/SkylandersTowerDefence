@@ -46,7 +46,7 @@ public class TowerAoe : TowerBase
     public override void OnHit(GameObject Bullet)
     {
         Destroy(Bullet);
-        target.GetComponent<Target>().TakeDamage(damage);
+        target.GetComponent<Target>().TakeDamage(damage, damage);
         Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
     }
 

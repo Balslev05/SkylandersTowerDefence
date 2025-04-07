@@ -27,7 +27,7 @@ public class WaveManager : MonoBehaviour
         EnemyBase spawnedEnemy = Instantiate(enemy, SpawnPoint.spawnPoint, Quaternion.identity).GetComponent<EnemyBase>();
         spawnedEnemy.wayPointManager = SpawnPoint;
         spawnedEnemy.target = SpawnPoint.wayPoints[0];
-        spawnedEnemy.fromWave = CurrentWave;
+        spawnedEnemy.fromWaveID = CurrentWave;
     }
 
     private IEnumerator StartBattle()

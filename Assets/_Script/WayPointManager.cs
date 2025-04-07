@@ -19,7 +19,6 @@ public class WayPointManager : MonoBehaviour
         }
     }
 
-
     public void FindDistanceWalked()
     {
         totalDistance = 0;
