@@ -6,25 +6,29 @@ using UnityEngine.Rendering;
 public class EnemyBase : MonoBehaviour
 {
     [Header("Components")]
-    private Rigidbody2D rb;
-    public Transform target;
-    public WayPointManager wayPointManager;
-    private int wayPointIndex = 0;
     public HealthBar healthBar;
+    [HideInInspector] public Transform target;
+    [HideInInspector] public WayPointManager wayPointManager;
+    private Rigidbody2D rb;
+    private int wayPointIndex = 0;
+    public int fromWaveID;
 
     [HideInInspector] public Vector2 direction;
 
     [Header("Stats")]
     [SerializeField] private int maxHealth;
     [HideInInspector] public float currentHealth;
+    public float physicalResistance;
+    public float elementalResistance;
     public float moveSpeed;
-    [SerializeField] private float damage;
-    [SerializeField] private float distanceToWayPointThreshold;
+    [SerializeField] private int damage;
+    [SerializeField] private float AttackRate;
     public int currencyValue;
-
-
-    public int fromWave;
+    [SerializeField] private float distanceToWayPointThreshold;
     private bool reachedEndPoint;
+
+    public float distanceTraveled = 0f;
+    private Vector2 lastPosition;
 
     private void Start()
     {
@@ -36,6 +40,9 @@ public class EnemyBase : MonoBehaviour
     private void FixedUpdate()
     {
         if (!reachedEndPoint) { Move(); }
+
+        TrackDistance();
+        CheckProgress();
     }
 
     private void Move()
@@ -51,7 +58,6 @@ public class EnemyBase : MonoBehaviour
         {
             GetNextWayPoint();
         }
-
     }
 
     private void GetNextWayPoint()
@@ -64,6 +70,18 @@ public class EnemyBase : MonoBehaviour
 
         wayPointIndex++;
         target = wayPointManager.wayPoints[wayPointIndex];
+    }
+
+    void TrackDistance()
+    {
+        float frameDistance = Vector2.Distance(lastPosition, transform.position);
+        distanceTraveled += frameDistance;
+        lastPosition = transform.position;
+    }
+
+    void CheckProgress()
+    {
+        float progress = distanceTraveled / wayPointManager.totalDistance;
     }
 
     private void AttackBase()
