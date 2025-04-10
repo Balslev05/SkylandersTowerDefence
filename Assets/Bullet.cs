@@ -3,7 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float damage;
-    [HideInInspector] public float bulletSpeed = 0;
+    public float bulletSpeed = 0;
     public bool destroyOnHit = false;
     private Vector2 moveDirection;
     

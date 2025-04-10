@@ -29,8 +29,7 @@ public class Eksplosion : MonoBehaviour
         Destroy(gameObject);
         GameObject Firemarks = Instantiate(FiremarksPrefab, transform.position, Quaternion.identity);
 
-        Firemarks.transform.DOScale(scale, FireMarksTime).SetEase(Ease.OutExpo).OnComplete(() => 
-        Firemarks.transform.DOScale(0, FireMarksTime).SetEase(Ease.InExpo)).onComplete += () => Destroy(Firemarks);
+        
 
     }
 }

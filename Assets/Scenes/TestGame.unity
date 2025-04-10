@@ -359,7 +359,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &154851640
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,7 +623,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &352067028
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,7 +898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currencyText: {fileID: 424363878}
-  startingCurrency: 9990
+  startingCurrency: 99999
   currency: 0
 --- !u!1 &424363876
 GameObject:
@@ -1209,7 +1207,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &463605726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1350,7 +1347,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &473110492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,7 +1605,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &548657274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2130,7 +2125,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &719855625
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,7 +2740,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!58 &1281728331
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3128,7 +3121,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &1450227135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4095,7 +4087,6 @@ MonoBehaviour:
   gameManager: {fileID: 778436876}
   isSelected: 0
   TowerPlaced: 0
-  Upgradebel: 0
 --- !u!1 &2111875220
 GameObject:
   m_ObjectHideFlags: 0

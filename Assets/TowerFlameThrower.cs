@@ -5,7 +5,9 @@ public class TowerFlameThrower : TowerBase
     [Header("TowerStats")]
     [SerializeField] private float offsetScale = 1;
     public Gradient FlameGradient;
-    public int fireSpreadAngele = 0;
+    public float SpreadAngle = 10f;
+    public int numProjectiles = 5; 
+    public float randomSpeed = 5f;
 
     void Start()
     {
@@ -32,36 +34,31 @@ public class TowerFlameThrower : TowerBase
 
     public override void Fire()
     {
+        for (int i = 0; i < numProjectiles; i++)
+        {   
+            Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
+            bullet.GetComponent<Bullet>().damage = damage;
+            bullet.GetComponent<Bullet>().bulletSpeed = Random.Range(0.010f, randomSpeed + 0.1f);
+            Vector3 startScale = bullet.localScale;
 
-    int numProjectiles = 5; 
-    float baseSpread = fireSpreadAngele; 
+            SpriteRenderer bulletRenderer = bullet.GetComponent<SpriteRenderer>();
+            StartGradient(bulletRenderer);
+            // Apply random spread but maintain the target direction
+            float angleOffset = Random.Range(-SpreadAngle, SpreadAngle);
+            Quaternion spreadRotation = Quaternion.Euler(0, 0, angleOffset);
+            bullet.rotation = transform.rotation * spreadRotation;
 
-    for (int i = 0; i < numProjectiles; i++)
-    {
-        float angleOffset = Random.Range(-baseSpread, baseSpread);
-        Quaternion rotation = Quaternion.Euler(0, 0, angleOffset);
+            bullet.DOScale(startScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
 
-        Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, rotation).transform;
-        bullet.GetComponent<Bullet>().damage = damage;
-        Vector3 startScale = bullet.localScale;
-
-        SpriteRenderer bulletRenderer = bullet.GetComponent<SpriteRenderer>();
-        StartGradient(bulletRenderer);
-
-        Vector3 targetPosition = target.position + (Vector3)(Random.insideUnitCircle * 1.5f); 
-
-        bullet.DOScale(startScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
-        bullet.DOMove(FindTarget(), DistanceToTarget()).OnComplete(() => 
-        {
             bulletRenderer.DOFade(0, 0.25f).OnComplete(() => Destroy(bullet.gameObject));
-           //-----OnHit(bullet.gameObject);
+            // Set direction properly so bullets move correctly
+            bullet.GetComponent<Bullet>().SetDirection(bullet.up);
 
-        });
+            Destroy(bullet.gameObject, 2.5f);
+        }
+        StartCoroutine(reloade());
+        
     }
-
-    StartCoroutine(reloade());
-    
-}
 
 
 

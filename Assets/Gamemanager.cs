@@ -14,6 +14,17 @@ public class Gamemanager : MonoBehaviour
     private Manager Manager;
 
 
+    public void ReplaceTowers(GameObject TowerOld, GameObject TowerNew)
+    {
+        for (int i = 0; i < SpawnedTowers.Count; i++)
+        {
+            if (SpawnedTowers[i] == TowerOld)
+            {
+                SpawnedTowers[i] = TowerNew;
+            }
+        }
+    }
+
     void Update()
     {
         //fastForward
@@ -67,7 +78,6 @@ public class Gamemanager : MonoBehaviour
             {
                 Spawners[i].GetComponent<SpriteRenderer>().color = Color.white;
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
-                Spawners[i].GetComponent<SpawnPoint>().Upgradebel = false;
                 Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
             } 
         }
@@ -84,7 +94,6 @@ public class Gamemanager : MonoBehaviour
 
                 //sSpawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
                 Spawners[i].GetComponent<SpawnPoint>().isSelected = false;
-                Spawners[i].GetComponent<SpawnPoint>().Upgradebel = false;
                 Spawners[i].GetComponent<SpriteRenderer>().color = Color.white;
                 Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
                 
@@ -104,9 +113,8 @@ public class Gamemanager : MonoBehaviour
                 Debug.Log("Found the spawner");
                 GameObject TowerTemp = SpawnedTowers[i];
                 Debug.Log("Found the tower");
-                TowerTemp.GetComponent<TowerBase>().UpgradeTower(Upgrade, Spawner.transform);
+                TowerTemp.GetComponent<TowerBase>().UpgradeTower(Upgrade, Spawner.transform,TowerTemp);
                 Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
-                SpawnedTowers.Remove(SpawnedTowers[i]);
                 Destroy(TowerTemp); 
             }
         }
