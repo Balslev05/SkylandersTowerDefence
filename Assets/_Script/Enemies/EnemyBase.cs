@@ -3,12 +3,15 @@ using UnityEngine;
 using UnityEngine.Animations;
 using DG.Tweening;
 using UnityEngine.Rendering;
+using System.Collections;
+using Unity.VisualScripting;
 public class EnemyBase : MonoBehaviour
 {
     [Header("Components")]
     public HealthBar healthBar;
     [HideInInspector] public Transform target;
     [HideInInspector] public WayPointManager wayPointManager;
+    private HomeBase homeBase;
     private Rigidbody2D rb;
     private int wayPointIndex = 0;
     public int fromWaveID;
@@ -26,6 +29,7 @@ public class EnemyBase : MonoBehaviour
     public int bounty;
     [SerializeField] private float distanceToWayPointThreshold;
     private bool reachedEndPoint;
+    private bool readyToAttack;
 
     public float distanceTraveled = 0f;
     private Vector2 lastPosition;
@@ -35,11 +39,13 @@ public class EnemyBase : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        homeBase = GameObject.FindWithTag("Player").GetComponent<HomeBase>();
     }
 
     private void FixedUpdate()
     {
         if (!reachedEndPoint) { Move(); }
+        else if (readyToAttack) { StartCoroutine(AttackBase()); }
 
         TrackDistance();
         CheckProgress();
@@ -65,6 +71,7 @@ public class EnemyBase : MonoBehaviour
         if (wayPointIndex >= wayPointManager.wayPoints.Length - 1)
         {
             reachedEndPoint = true;
+            readyToAttack = true;
             return;
         }
 
@@ -84,8 +91,12 @@ public class EnemyBase : MonoBehaviour
         float progress = distanceTraveled / wayPointManager.totalDistance;
     }
 
-    private void AttackBase()
+    private IEnumerator AttackBase()
     {
-        
+        readyToAttack = false;
+        homeBase.TakeDamage(damage);
+
+        yield return new WaitForSeconds(AttackRate);
+        readyToAttack = true;
     }
 }

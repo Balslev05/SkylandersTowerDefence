@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: 'ListOfArmsR.Array.data[3]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3837633235119306702, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4009017435757255336, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
