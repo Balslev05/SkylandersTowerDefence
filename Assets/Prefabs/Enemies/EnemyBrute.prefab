@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RandomzieZombie: 1
-  animateZombie: 0
+  animateZombie: 1
   Hair: {fileID: 969193187213925114}
   Head: {fileID: 554069104357197170}
   Body: {fileID: 3015382900312330402}

@@ -488,6 +488,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2311993810224805284}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: animateZombie
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: RandomzieZombie
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: ListOfBody.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -594,6 +602,10 @@ PrefabInstance:
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: 'ListOfArmsR.Array.data[3]'
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837633235119306702, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4009017435757255336, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: m_LocalRotation.w

@@ -3,7 +3,7 @@ using TMPro;
 
 public class CurrencyManager : MonoBehaviour
 {
-    public TMP_Text currencyText;
+    [SerializeField] private TMP_Text currencyText;
     
     [SerializeField] private int startingCurrency;
     public int currency;
