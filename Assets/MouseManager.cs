@@ -4,8 +4,11 @@ public class MouseManager : MonoBehaviour
 {
     public Camera cam;
 
+    public Manager manager;
+
     void Start()
     {
+        manager = GameObject.FindWithTag("Manager").GetComponent<Manager>();
         if (cam == null)
         {
             cam = Camera.main;
@@ -23,6 +26,10 @@ public class MouseManager : MonoBehaviour
                 if (hit.collider.CompareTag("SpawnPoint")) 
                 {
                     hit.collider.GetComponent<SpawnPoint>().Deselcted(hit.collider.gameObject);
+                    hit.collider.GetComponent<SpriteRenderer>().color = Color.white;
+                    hit.collider.GetComponent<SpawnPoint>().TowerPlaced = false;
+                    hit.collider.GetComponent<SpawnPoint>().isSelected = false;
+                    manager.currencyManager.GetMoney(50);
                     Debug.Log("Remove tHIS SHIT");
                 }
                 else
