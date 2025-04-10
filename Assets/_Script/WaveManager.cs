@@ -1,10 +1,14 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+
 
 public class WaveManager : MonoBehaviour
 {
     [SerializeField] private CurrencyManager currencyManager;
+
+    public TMP_Text waveCounterText;
 
     [SerializeField] private WayPointManager LeftWayPointManager;
     [SerializeField] private WayPointManager RightWayPointManager;
@@ -32,6 +36,8 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator StartBattle()
     {
+        UpdateText();
+
         for (int i = 0; i < waves[currentWave].Enemies.Count; i++)
         {
             if (waves[currentWave].SpawnLeft[i])
@@ -59,5 +65,10 @@ public class WaveManager : MonoBehaviour
         {
             Debug.Log("Game Won");
         }
+    }
+
+    private void UpdateText()
+    {
+        waveCounterText.text = $"Wave: {(currentWave + 1).ToString()}/{waves.Count}";
     }
 }
