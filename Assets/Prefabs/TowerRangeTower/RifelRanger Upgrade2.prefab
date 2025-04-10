@@ -389,7 +389,7 @@ MonoBehaviour:
   FinishBuilded: 0
   canFire: 0
   IsLooking: 0
-  upgrade1Price: 200
+  upgrade1Price: 160
   upgrade1Prefab: {fileID: 8982258383580432414, guid: 7604a2f923c8a324eaa3b7972e54191c, type: 3}
   upgrade2Price: 0
   upgrade2Prefab: {fileID: 0}
