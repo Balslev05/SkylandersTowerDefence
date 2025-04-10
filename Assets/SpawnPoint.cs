@@ -5,7 +5,6 @@ public class SpawnPoint : MonoBehaviour
     public Gamemanager gameManager;
     public bool isSelected = false;
     public bool TowerPlaced = false;
-    public bool Upgradebel = false;
     
     void Start()
     {
@@ -14,7 +13,7 @@ public class SpawnPoint : MonoBehaviour
 
     void Update()
     {  
-        if (Upgradebel && ReadUpgradeInput() != -1)
+        if (isSelected && TowerPlaced && ReadUpgradeInput() != -1)
         {
             gameManager.FindUpgradeTower(gameObject, ReadUpgradeInput());
             GetComponent<SpriteRenderer>().color = Color.white;
@@ -45,7 +44,7 @@ public class SpawnPoint : MonoBehaviour
         string input = UnityEngine.Input.inputString; 
         int result;
 
-        if (int.TryParse(input, out result) && result > 0 && result < 3) 
+        if (int.TryParse(input, out result) && result > 0 && result < 2) 
         {
             return result;
         }
@@ -65,7 +64,6 @@ public class SpawnPoint : MonoBehaviour
         {
             gameManager.SelectTower(this.gameObject);
             this.GetComponent<SpriteRenderer>().color = Color.green;
-            Upgradebel = true;
         }
     }   
     

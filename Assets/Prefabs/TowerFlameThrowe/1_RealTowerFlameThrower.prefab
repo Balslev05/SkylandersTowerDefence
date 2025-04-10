@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 115015039372633909}
   - component: {fileID: 6823835646669852230}
   m_Layer: 0
-  m_Name: RealTowerFlameThrower 1
+  m_Name: 1_RealTowerFlameThrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.91, y: 9.33, z: -0.052426193}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8871985463879740253}
@@ -261,19 +261,20 @@ MonoBehaviour:
   OnHitSpawn: {fileID: 0}
   TowerPrice: 100
   range: 6
-  damage: 0.075
-  fireRate: 0.1
-  BulletSpeed: 0.4
+  damage: 0.025
+  fireRate: 0.05
+  BulletSpeed: 0.25
   buildTime: 2
   aimConst: 1.3
   turningSpeed: 0.2
   FinishBuilded: 0
   canFire: 0
   IsLooking: 0
-  upgrade1Price: 0
-  upgrade1Prefab: {fileID: 0}
+  upgrade1Price: 160
+  upgrade1Prefab: {fileID: 1889138985087773731, guid: 4c9840ee9ea28fb4da3de1584ef73b0f, type: 3}
   upgrade2Price: 0
   upgrade2Prefab: {fileID: 0}
+  FlameLifeTime: 0.3
   offsetScale: 1.5
   FlameGradient:
     serializedVersion: 2
@@ -281,16 +282,16 @@ MonoBehaviour:
     key1: {r: 1, g: 0.84304345, b: 0, a: 1}
     key2: {r: 1, g: 0.4571097, b: 0, a: 0}
     key3: {r: 1, g: 0.47630766, b: 0, a: 0}
-    key4: {r: 1, g: 0.07826503, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 1, g: 0.110215366, b: 0, a: 0}
+    key5: {r: 0.46540874, g: 0.03650265, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 20303
-    ctime2: 45746
-    ctime3: 46517
-    ctime4: 65535
-    ctime5: 0
+    ctime1: 9124
+    ctime2: 18504
+    ctime3: 27114
+    ctime4: 41891
+    ctime5: 65535
     ctime6: 0
     ctime7: 0
     atime0: 0
@@ -303,9 +304,11 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_ColorSpace: -1
-    m_NumColorKeys: 5
+    m_NumColorKeys: 6
     m_NumAlphaKeys: 2
-  fireSpreadAngele: 45
+  SpreadAngle: 30
+  numProjectiles: 10
+  randomSpeed: 0.1
 --- !u!50 &6823835646669852230
 Rigidbody2D:
   serializedVersion: 5
@@ -441,7 +444,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -2080751084852149034, guid: 53ac00ddd32a1b34bba8c5961d41282e, type: 3}
-  m_Color: {r: 1, g: 0.3555199, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
