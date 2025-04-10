@@ -44,7 +44,7 @@ public class SpawnPoint : MonoBehaviour
         string input = UnityEngine.Input.inputString; 
         int result;
 
-        if (int.TryParse(input, out result) && result > 0 && result < 3) 
+        if (int.TryParse(input, out result) && result > 0 && result < 2) 
         {
             return result;
         }

@@ -106,9 +106,10 @@ public class Gamemanager : MonoBehaviour
     
     public void FindUpgradeTower(GameObject Spawner, int Upgrade)
     {
+        CurrencyManager currencyManager = Manager.currencyManager;
         for (int i = 0; i < UsedSpawners.Count; i++)
         {
-            if (UsedSpawners[i] == Spawner)
+            if (UsedSpawners[i] == Spawner && SpawnedTowers[i] != null && Manager.currencyManager.currency >= SpawnedTowers[i].GetComponent<TowerBase>().upgrade1Price)
             {
                 Debug.Log("Found the spawner");
                 GameObject TowerTemp = SpawnedTowers[i];
@@ -116,7 +117,7 @@ public class Gamemanager : MonoBehaviour
                 TowerTemp.GetComponent<TowerBase>().UpgradeTower(Upgrade, Spawner.transform,TowerTemp);
                 Spawners[i].transform.DOScale(new Vector3(1f, 1f, 1f), 0.5f);
                 Destroy(TowerTemp); 
-            }
+            } 
         }
     }
 }

@@ -14,22 +14,18 @@ public class Eksplosion : MonoBehaviour
 
     public void EKSPLODE()
     {
+        LeaveFireMarks();
         transform.localScale = new Vector3(0, 0, 0);
         transform.DOScale(scale, 0.5f).SetEase(Ease.OutExpo).OnComplete(() => 
         transform.DOScale(0, 0.5f).SetEase(Ease.InExpo)).onComplete += () => Destroy(gameObject);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void LeaveFireMarks()
     {
+        if (FiremarksPrefab == null) return;
+        
         Destroy(gameObject);
         GameObject Firemarks = Instantiate(FiremarksPrefab, transform.position, Quaternion.identity);
-
-        
-
+        Destroy(Firemarks, FireMarksTime);
     }
 }

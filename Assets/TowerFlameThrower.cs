@@ -3,6 +3,7 @@ using DG.Tweening;
 public class TowerFlameThrower : TowerBase
 {
     [Header("TowerStats")]
+    public float FlameLifeTime = 0.5f;
     [SerializeField] private float offsetScale = 1;
     public Gradient FlameGradient;
     public float SpreadAngle = 10f;
@@ -50,7 +51,7 @@ public class TowerFlameThrower : TowerBase
 
             bullet.DOScale(startScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
 
-            bulletRenderer.DOFade(0, 0.25f).OnComplete(() => Destroy(bullet.gameObject));
+            bulletRenderer.DOFade(0, FlameLifeTime).OnComplete(() => Destroy(bullet.gameObject));
             // Set direction properly so bullets move correctly
             bullet.GetComponent<Bullet>().SetDirection(bullet.up);
 

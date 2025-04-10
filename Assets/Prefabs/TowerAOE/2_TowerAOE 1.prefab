@@ -201,11 +201,11 @@ MonoBehaviour:
   target: {fileID: 0}
   Bulletprefab: {fileID: 6844150545549898088, guid: a4814548d2569654f9c93b4a090e8d0d, type: 3}
   ShootPoint: {fileID: 6661321564512193957}
-  OnHitSpawn: {fileID: 7964889459092918624, guid: 193399d1c50d72b4696afa8955529b63, type: 3}
+  OnHitSpawn: {fileID: 7964889459092918624, guid: 79c5d3285a3134842951526c6cf789b7, type: 3}
   TowerPrice: 100
   range: 5
   damage: 0
-  fireRate: 3
+  fireRate: 5
   BulletSpeed: 1.2
   buildTime: 1
   aimConst: 1.5

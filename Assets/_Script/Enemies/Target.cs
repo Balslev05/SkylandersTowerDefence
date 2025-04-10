@@ -16,7 +16,7 @@ public class Target : MonoBehaviour
 
     public void TakeDamage(float physicalDamage, float elementalDamage)
     {
-        // Reducer skade baseret på enemy resistans
+        // Reducer skade baseret pï¿½ enemy resistans
         float physicalDamageReduction = enemy.physicalResistance / 100;
         float reducedPhysicalDamage = physicalDamage * (1 - physicalDamageReduction);
 
