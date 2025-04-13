@@ -8,6 +8,7 @@ public abstract class TowerBase : MonoBehaviour
 {
     public Transform target;
     [Header("Assigenebels")]
+    public GameObject LandEffectPrefab;
     public GameObject Bulletprefab;
     public Transform ShootPoint;
     public GameObject OnHitSpawn;
@@ -132,9 +133,11 @@ public abstract class TowerBase : MonoBehaviour
         this.transform.localScale = new Vector3(10, 10, 10);
         this.transform.DOScale(1, buildTime).SetEase(Ease.Linear);
         yield return new WaitForSeconds(buildTime);
-        CameraShake.Shake(0.5f, 0.5f);
-        canFire = true;
         FinishBuilded = true;
+        canFire = true;
+        CameraShake.Shake(0.5f, 0.5f);
+        GameObject t = Instantiate(LandEffectPrefab, transform.position, Quaternion.identity);
+        Destroy(t, 0.5f);
     }
 
     public IEnumerator reloade()
@@ -146,7 +149,7 @@ public abstract class TowerBase : MonoBehaviour
     public float DistanceToTarget()
     {
         float distance = Vector2.Distance(transform.position, target.position);
-        return Mathf.Ceil(distance/3- BulletSpeed)+0.5f;
+        return Mathf.Ceil(distance/3 -BulletSpeed)+0.5f;
     }
 
     private void SetTarget(Transform _target)

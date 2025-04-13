@@ -375,12 +375,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  LandEffectPrefab: {fileID: 19559358489819976, guid: e8ffbf314d6f5824cb2da58e91e98e1d, type: 3}
   Bulletprefab: {fileID: 5050035520650213461, guid: 8871c8646e776ae459c86a1e3d8ce1fe, type: 3}
   ShootPoint: {fileID: 1088666100959256011}
   OnHitSpawn: {fileID: 0}
   TowerPrice: 70
   range: 10
   damage: 1.3
+  physicalDamage: 0.1
+  elementalDamage: 0.1
   fireRate: 0.3
   BulletSpeed: 100
   buildTime: 1
@@ -432,6 +435,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6944716950516912525}
     m_Modifications:
+    - target: {fileID: 522398284084718560, guid: 203ecce8c0e2d0849988fc0e5c60453f, type: 3}
+      propertyPath: AmountOfBullets
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2491675907999501246, guid: 203ecce8c0e2d0849988fc0e5c60453f, type: 3}
       propertyPath: m_Name
       value: ShotgunRanger

@@ -47,7 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29351eaf689cedf4e84c758d3ad84106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 5
+  anim:
+  - {fileID: -1514977730, guid: acf726156316787409f7364da5bdf8a7, type: 3}
+  - {fileID: -79535835, guid: acf726156316787409f7364da5bdf8a7, type: 3}
+  - {fileID: -593178484, guid: acf726156316787409f7364da5bdf8a7, type: 3}
+  - {fileID: 670152224, guid: acf726156316787409f7364da5bdf8a7, type: 3}
+  - {fileID: -857239249, guid: acf726156316787409f7364da5bdf8a7, type: 3}
+  - {fileID: 1403816612, guid: acf726156316787409f7364da5bdf8a7, type: 3}
+  - {fileID: 0}
+  animtime: 0.05
+  scale: 6
   FireMarksTime: 2
   FiremarksPrefab: {fileID: 5057483027007819293, guid: 7eab475fba51a704a861902845b43beb, type: 3}
 --- !u!114 &7695577222255200061
@@ -62,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec10a56b0b4d797448f9d2ba7a9eb069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
+  damage: 37.5
   bulletSpeed: 0
   destroyOnHit: 0
 --- !u!212 &3379961780864467238
