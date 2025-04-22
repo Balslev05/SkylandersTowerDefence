@@ -86,6 +86,12 @@ public abstract class TowerBase : MonoBehaviour
             return;
         } 
 
+        if (target.tag != "Enemy")
+        {
+            SetTarget(null);
+            IsLooking = false;
+        }
+
         if (Vector2.Distance(transform.position, target.position) > range)
         {
             SetTarget(null);
