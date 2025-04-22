@@ -3,10 +3,12 @@ using System.ComponentModel;
 using UnityEngine;
 using DG.Tweening;
 using UnityEditor.Callbacks;
+using System.Runtime.ExceptionServices;
 public abstract class TowerBase : MonoBehaviour
 {
     public Transform target;
     [Header("Assigenebels")]
+    public GameObject LandEffectPrefab;
     public GameObject Bulletprefab;
     public Transform ShootPoint;
     public GameObject OnHitSpawn;
@@ -14,6 +16,8 @@ public abstract class TowerBase : MonoBehaviour
     public int TowerPrice = 70;
     public int range = 6;
     public float damage = 0.1f;
+    public float physicalDamage = 0.1f;
+    public float elementalDamage = 0.1f;
     public float fireRate = 1;
     public float BulletSpeed = 0.0f;
     public int buildTime = 2;
@@ -52,9 +56,28 @@ public abstract class TowerBase : MonoBehaviour
                 break;
             }
         }
-        SetTarget(t);
+        SortTargets(colliders);
     }
 
+    public void SortTargets(Collider2D[] colliders)
+    {
+        Transform longestDistanceEnemy = null;
+        float maxDistanceTraveled = float.MinValue;
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                EnemyBase enemy = collider.GetComponent<EnemyBase>();
+                if (enemy.distanceTraveled > maxDistanceTraveled)
+                {
+                    maxDistanceTraveled = enemy.distanceTraveled;
+                    longestDistanceEnemy = collider.transform;   
+                }
+            }
+        }
+        SetTarget(longestDistanceEnemy);
+    }
     public void CheckTargetStatus()
     {
         if (target == null)
@@ -69,6 +92,7 @@ public abstract class TowerBase : MonoBehaviour
             IsLooking = false;
         }
     }
+    
 
     public void TurnToTarget()
     {
@@ -109,9 +133,11 @@ public abstract class TowerBase : MonoBehaviour
         this.transform.localScale = new Vector3(10, 10, 10);
         this.transform.DOScale(1, buildTime).SetEase(Ease.Linear);
         yield return new WaitForSeconds(buildTime);
-        CameraShake.Shake(0.5f, 0.5f);
-        canFire = true;
         FinishBuilded = true;
+        canFire = true;
+        CameraShake.Shake(0.5f, 0.5f);
+        GameObject t = Instantiate(LandEffectPrefab, transform.position, Quaternion.identity);
+        Destroy(t, 0.5f);
     }
 
     public IEnumerator reloade()
@@ -123,7 +149,7 @@ public abstract class TowerBase : MonoBehaviour
     public float DistanceToTarget()
     {
         float distance = Vector2.Distance(transform.position, target.position);
-        return Mathf.Ceil(distance/3- BulletSpeed)+0.5f;
+        return Mathf.Ceil(distance/3 -BulletSpeed)+0.5f;
     }
 
     private void SetTarget(Transform _target)

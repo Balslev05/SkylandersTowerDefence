@@ -31,4 +31,4 @@ MonoBehaviour:
   - {fileID: 1516308751081600287, guid: df67e5b7db150df45974db274688ec96, type: 3}
   SpawnLeft: 01000100010001000100010001000100
   spawnDelay: 1
-  currencyValue: 100
+  currencyValue: 50

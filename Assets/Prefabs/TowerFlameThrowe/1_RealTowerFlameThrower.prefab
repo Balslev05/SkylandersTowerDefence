@@ -256,12 +256,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  LandEffectPrefab: {fileID: 19559358489819976, guid: e8ffbf314d6f5824cb2da58e91e98e1d, type: 3}
   Bulletprefab: {fileID: 5050035520650213461, guid: d24f49a2d14847c4e8d82b673e46d509, type: 3}
   ShootPoint: {fileID: 7625270017830539892}
   OnHitSpawn: {fileID: 0}
   TowerPrice: 100
   range: 6
   damage: 0.025
+  physicalDamage: 0.1
+  elementalDamage: 0.1
   fireRate: 0.05
   BulletSpeed: 0.25
   buildTime: 2
@@ -307,7 +310,7 @@ MonoBehaviour:
     m_NumColorKeys: 6
     m_NumAlphaKeys: 2
   SpreadAngle: 30
-  numProjectiles: 10
+  numProjectiles: 7
   randomSpeed: 0.1
 --- !u!50 &6823835646669852230
 Rigidbody2D:
