@@ -10,8 +10,8 @@ public class WaveManager : MonoBehaviour
 
     public TMP_Text waveCounterText;
 
-    [SerializeField] private WayPointManager LeftWayPointManager;
-    [SerializeField] private WayPointManager RightWayPointManager;
+    public WayPointManager LeftWayPointManager;
+    public WayPointManager RightWayPointManager;
 
     [SerializeField] private List<Wave> waves = new List<Wave>();
 
@@ -26,12 +26,12 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(StartBattle());
     }
 
-    private void Spawn(WayPointManager SpawnPoint, GameObject enemy, int CurrentWave)
+    private void Spawn(WayPointManager SpawnPoint, GameObject enemy, int currentWave)
     {
         EnemyBase spawnedEnemy = Instantiate(enemy, SpawnPoint.spawnPoint, Quaternion.identity).GetComponent<EnemyBase>();
         spawnedEnemy.wayPointManager = SpawnPoint;
         spawnedEnemy.target = SpawnPoint.wayPoints[0];
-        spawnedEnemy.fromWaveID = CurrentWave;
+        spawnedEnemy.fromWaveID = currentWave;
     }
 
     private IEnumerator StartBattle()

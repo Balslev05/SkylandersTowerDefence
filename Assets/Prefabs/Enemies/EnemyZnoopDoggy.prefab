@@ -69,6 +69,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: GFX
+      value: 
+      objectReference: {fileID: 5689627651914175609}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: bounty
       value: 3
       objectReference: {fileID: 0}
@@ -120,3 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 508f9305a75170743b7f39c3c74bba6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5689627651914175609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3837633235119306702, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+  m_PrefabInstance: {fileID: 8914766801402946487}
+  m_PrefabAsset: {fileID: 0}

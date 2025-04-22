@@ -8,6 +8,7 @@ TagManager:
   - WayPoint
   - SpawnPoint
   - Manager
+  - UnderTunnelEnemy
   layers:
   - Default
   - TransparentFX

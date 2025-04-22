@@ -607,6 +607,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: GFX
+      value: 
+      objectReference: {fileID: 2073475118042970027}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: bounty
       value: 1000000
       objectReference: {fileID: 0}

@@ -488,6 +488,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2311993810224805284}
     - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2676224114631450453, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: animateZombie
       value: 1
       objectReference: {fileID: 0}
@@ -668,6 +672,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+      propertyPath: GFX
+      value: 
+      objectReference: {fileID: 6320721317559627515}
+    - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: bounty
       value: 5
       objectReference: {fileID: 0}
@@ -774,5 +782,10 @@ MonoBehaviour:
 --- !u!4 &6149473467068384157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4009017435757255336, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
+  m_PrefabInstance: {fileID: 7130805234500475189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6320721317559627515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3837633235119306702, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
   m_PrefabInstance: {fileID: 7130805234500475189}
   m_PrefabAsset: {fileID: 0}

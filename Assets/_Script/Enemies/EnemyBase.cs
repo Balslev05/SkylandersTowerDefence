@@ -13,6 +13,7 @@ public class EnemyBase : MonoBehaviour
     [HideInInspector] public WayPointManager wayPointManager;
     private HomeBase homeBase;
     private Rigidbody2D rb;
+    public GameObject GFX;
     private int wayPointIndex = 0;
     public int fromWaveID;
 
