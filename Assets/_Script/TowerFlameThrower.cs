@@ -38,7 +38,8 @@ public class TowerFlameThrower : TowerBase
         for (int i = 0; i < numProjectiles; i++)
         {   
             Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
-            bullet.GetComponent<Bullet>().damage = damage;
+            bullet.GetComponent<Bullet>().physicalDamage = physicalDamage;
+            bullet.GetComponent<Bullet>().elementalDamage = elementalDamage;
             bullet.GetComponent<Bullet>().bulletSpeed = Random.Range(0.010f, randomSpeed + 0.1f);
             Vector3 startScale = bullet.localScale;
 

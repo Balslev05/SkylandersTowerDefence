@@ -677,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 6320721317559627515}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: bounty
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: damage
@@ -689,7 +689,7 @@ PrefabInstance:
       objectReference: {fileID: 5798280520302609885}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: maxHealth
-      value: 48
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6724036065652434008, guid: 458a327567ffa434cbc2d5b144edc420, type: 3}
       propertyPath: moveSpeed

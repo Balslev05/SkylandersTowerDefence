@@ -33,26 +33,26 @@ public class Rangers : TowerBase
     }
    public override void Fire()
     {
+        for (int i = 0; i < AmountOfBullets; i++)
+        {   
+            Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
+            bullet.GetComponent<Bullet>().physicalDamage = physicalDamage;
+            bullet.GetComponent<Bullet>().elementalDamage = elementalDamage;
+            bullet.GetComponent<Bullet>().bulletSpeed = Random.Range(1, randomSpeed + 1);
 
-    for (int i = 0; i < AmountOfBullets; i++)
-    {   
-        Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
-        bullet.GetComponent<Bullet>().damage = damage;
-        bullet.GetComponent<Bullet>().bulletSpeed = Random.Range(1, randomSpeed + 1);
+            // Apply random spread but maintain the target direction
+            float angleOffset = Random.Range(-SpreadAngle, SpreadAngle);
+            Quaternion spreadRotation = Quaternion.Euler(0, 0, angleOffset);
+            bullet.rotation = transform.rotation * spreadRotation;
 
-        // Apply random spread but maintain the target direction
-        float angleOffset = Random.Range(-SpreadAngle, SpreadAngle);
-        Quaternion spreadRotation = Quaternion.Euler(0, 0, angleOffset);
-        bullet.rotation = transform.rotation * spreadRotation;
+            // Set direction properly so bullets move correctly
+            bullet.GetComponent<Bullet>().SetDirection(bullet.up);
 
-        // Set direction properly so bullets move correctly
-        bullet.GetComponent<Bullet>().SetDirection(bullet.up);
-
-        Destroy(bullet.gameObject, 2.5f);
-    }
+            Destroy(bullet.gameObject, 2.5f);
+        }
     
-    StartCoroutine(reloade());
-}
+        StartCoroutine(reloade());
+    }
 
     
     public override void OnHit(GameObject Bullet)
@@ -62,11 +62,10 @@ public class Rangers : TowerBase
         Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
     }
 
-
-    public void secondaryFire(){
+    /*public void secondaryFire(){
         Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
         bullet.GetComponent<Bullet>().damage = damage;
         bullet.GetComponent<Bullet>().bulletSpeed = Random.Range(1, randomSpeed + 1);
         bullet.GetComponent<Bullet>().SetDirection(bullet.up);
-    }
+    }*/
 }

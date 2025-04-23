@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage;
-    public float bulletSpeed = 0;
+    [HideInInspector] public float physicalDamage;
+    [HideInInspector] public float elementalDamage;
+    [HideInInspector] public float bulletSpeed = 0;
     public bool destroyOnHit = false;
     private Vector2 moveDirection;
     
@@ -22,7 +23,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            collision.GetComponent<Target>().TakeDamage(damage, damage);
+            collision.GetComponent<Target>().TakeDamage(physicalDamage, elementalDamage);
             if (destroyOnHit)
             {
                 Destroy(gameObject);

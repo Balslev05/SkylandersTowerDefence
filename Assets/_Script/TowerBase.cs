@@ -15,7 +15,6 @@ public abstract class TowerBase : MonoBehaviour
     [Header("Stats")]
     public int TowerPrice = 70;
     public int range = 6;
-    public float damage = 0.1f;
     public float physicalDamage = 0.1f;
     public float elementalDamage = 0.1f;
     public float fireRate = 1;
