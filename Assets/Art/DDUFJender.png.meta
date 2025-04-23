@@ -1,0 +1,853 @@
+fileFormatVersion: 2
+guid: 5dc8f0b8bd4b72f40a8b88ac37bfddca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -985845785290918722
+    second: DDUFJender_0
+  - first:
+      213: -4360588190112993369
+    second: DDUFJender_1
+  - first:
+      213: -8357346006902690745
+    second: DDUFJender_2
+  - first:
+      213: 1583329523418542605
+    second: DDUFJender_3
+  - first:
+      213: -7541905695249787702
+    second: DDUFJender_4
+  - first:
+      213: 3374986336900760756
+    second: DDUFJender_5
+  - first:
+      213: -5561239348033474581
+    second: DDUFJender_6
+  - first:
+      213: -3788797482063945738
+    second: DDUFJender_7
+  - first:
+      213: 5836432117252860821
+    second: DDUFJender_8
+  - first:
+      213: 6838910949451511394
+    second: DDUFJender_9
+  - first:
+      213: -630262368720361365
+    second: DDUFJender_10
+  - first:
+      213: -6604960116050576513
+    second: DDUFJender_11
+  - first:
+      213: -40559043112935209
+    second: DDUFJender_12
+  - first:
+      213: -5071572835242906699
+    second: DDUFJender_13
+  - first:
+      213: -8738218327266338054
+    second: DDUFJender_14
+  - first:
+      213: 6415675792351989838
+    second: DDUFJender_15
+  - first:
+      213: -7543942140229421447
+    second: DDUFJender_16
+  - first:
+      213: 5846827909554457977
+    second: DDUFJender_17
+  - first:
+      213: 3447271016241833781
+    second: DDUFJender_18
+  - first:
+      213: -738832188443283262
+    second: DDUFJender_19
+  - first:
+      213: 7647954893817037131
+    second: DDUFJender_20
+  - first:
+      213: -2367599031263811820
+    second: DDUFJender_21
+  - first:
+      213: -497281477832228278
+    second: DDUFJender_22
+  - first:
+      213: -3032152223400636890
+    second: DDUFJender_23
+  - first:
+      213: 7435791811889813069
+    second: DDUFJender_24
+  - first:
+      213: 3861889334034829921
+    second: DDUFJender_25
+  - first:
+      213: -4344878751246816300
+    second: DDUFJender_26
+  - first:
+      213: -4075379173800860978
+    second: DDUFJender_27
+  - first:
+      213: 3808963454545842953
+    second: DDUFJender_28
+  - first:
+      213: -1577020896751744253
+    second: DDUFJender_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 500
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ZombieH
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 2124
+        width: 431
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb43b644b729152f0800000000000000
+      internalID: -985845785290918722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieHe
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 2097
+        width: 431
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af2d8cf4241c73c0800000000000000
+      internalID: -4360588190112993369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair3
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 2297
+        width: 360
+        height: 408
+      alignment: 9
+      pivot: {x: 0.5019931, y: 0.1848342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74c2989f51eb40c80800000000000000
+      internalID: -8357346006902690745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair2
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 2145
+        width: 360
+        height: 408
+      alignment: 9
+      pivot: {x: 0.5114577, y: 0.56065637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac414299ab4c55790800000000000000
+      internalID: -7541905695249787702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruteBod
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 2123
+        width: 890
+        height: 494
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b444c4213c56de20800000000000000
+      internalID: 3374986336900760756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieHea
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1551
+        width: 431
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff1fa393cc7b6bc0800000000000000
+      internalID: -3788797482063945738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieHead
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1525
+        width: 431
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ba980861c2ff050800000000000000
+      internalID: 5836432117252860821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair4
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 1829
+        width: 360
+        height: 408
+      alignment: 9
+      pivot: {x: 0.23648207, y: 0.07540564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26636904641b8ee50800000000000000
+      internalID: 6838910949451511394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair1
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 1731
+        width: 360
+        height: 408
+      alignment: 9
+      pivot: {x: 0.4321635, y: 0.084336825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b68602507bbd047f0800000000000000
+      internalID: -630262368720361365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruteBody
+      rect:
+        serializedVersion: 2
+        x: 2499
+        y: 1488
+        width: 890
+        height: 494
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7bbe2fd4c77654a0800000000000000
+      internalID: -6604960116050576513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armor
+      rect:
+        serializedVersion: 2
+        x: 3679
+        y: 1666
+        width: 322
+        height: 399
+      alignment: 9
+      pivot: {x: 0.5090264, y: 0.4708619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0e2d2e3c7ef6ff0800000000000000
+      internalID: -40559043112935209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Armo
+      rect:
+        serializedVersion: 2
+        x: 4119
+        y: 1645
+        width: 478
+        height: 399
+      alignment: 9
+      pivot: {x: 0.49391794, y: 0.36159644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb63de60672e99b0800000000000000
+      internalID: -5071572835242906699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DDUFJender_14
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 1474
+        width: 109
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa5b797abc9bb680800000000000000
+      internalID: -8738218327266338054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DDUFJender_15
+      rect:
+        serializedVersion: 2
+        x: 1852
+        y: 1479
+        width: 109
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e409635342f090950800000000000000
+      internalID: 6415675792351989838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arm
+      rect:
+        serializedVersion: 2
+        x: 3698
+        y: 1291
+        width: 287
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976768dc7988e4790800000000000000
+      internalID: -7543942140229421447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ar
+      rect:
+        serializedVersion: 2
+        x: 4452
+        y: 1274
+        width: 187
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d45d3810b142150800000000000000
+      internalID: 5846827909554457977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EyeBrow
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 1246
+        width: 126
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 537289f89ba27df20800000000000000
+      internalID: 3447271016241833781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DDUFJender_19
+      rect:
+        serializedVersion: 2
+        x: 2233
+        y: 1255
+        width: 126
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c0b6330a042fb5f0800000000000000
+      internalID: -738832188443283262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieArm
+      rect:
+        serializedVersion: 2
+        x: 2953
+        y: 896
+        width: 245
+        height: 591
+      alignment: 9
+      pivot: {x: 0.25087392, y: 0.78523743}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41cc20947ef22a60800000000000000
+      internalID: 7647954893817037131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clothes
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1026
+        width: 467
+        height: 286
+      alignment: 9
+      pivot: {x: 0.46265772, y: 0.3374002}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41726f2a939942fd0800000000000000
+      internalID: -2367599031263811820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair5
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 958
+        width: 443
+        height: 290
+      alignment: 9
+      pivot: {x: 0.16539535, y: 0.16926269}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42cd60712d4919f0800000000000000
+      internalID: -497281477832228278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair6
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 829
+        width: 443
+        height: 290
+      alignment: 9
+      pivot: {x: 0.3687835, y: 0.10912876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e4b4b2e91abe5d0800000000000000
+      internalID: -3032152223400636890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieAr
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 504
+        width: 245
+        height: 591
+      alignment: 9
+      pivot: {x: 0.25087392, y: 0.89834845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d465373a14d313760800000000000000
+      internalID: 7435791811889813069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BruteArm
+      rect:
+        serializedVersion: 2
+        x: 3435
+        y: 382
+        width: 341
+        height: 775
+      alignment: 9
+      pivot: {x: 0.6448971, y: 0.92753243}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162140d53ef289530800000000000000
+      internalID: 3861889334034829921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clothe
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 755
+        width: 467
+        height: 286
+      alignment: 9
+      pivot: {x: 0.43153933, y: 0.24593711}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db6acfbbc3e3b3c0800000000000000
+      internalID: -4344878751246816300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ZombieA
+      rect:
+        serializedVersion: 2
+        x: 2966
+        y: 206
+        width: 245
+        height: 591
+      alignment: 9
+      pivot: {x: 0.19155772, y: 0.9376924}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec22394db385177c0800000000000000
+      internalID: -4075379173800860978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chlot
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 340
+        width: 467
+        height: 286
+      alignment: 9
+      pivot: {x: 0.49545884, y: 0.28495255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90356a6c4182cd430800000000000000
+      internalID: 3808963454545842953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hair7
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 495
+        width: 443
+        height: 290
+      alignment: 9
+      pivot: {x: 0.4475128, y: 0.19933009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b8ebd89db4d1ae0800000000000000
+      internalID: -1577020896751744253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: eb916905d74b90b44832be776ffc34ba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Ar: 5846827909554457977
+      Arm: -7543942140229421447
+      Armo: -5071572835242906699
+      Armor: -40559043112935209
+      BruteArm: 3861889334034829921
+      BruteBod: 3374986336900760756
+      BruteBody: -6604960116050576513
+      Clothe: -4344878751246816300
+      Clothes: -2367599031263811820
+      DDUFJender_14: -8738218327266338054
+      DDUFJender_15: 6415675792351989838
+      DDUFJender_19: -738832188443283262
+      DDUFJender_3: 1583329523418542605
+      DDUFJender_6: -5561239348033474581
+      EyeBrow: 3447271016241833781
+      Hair1: -630262368720361365
+      Hair2: -7541905695249787702
+      Hair3: -8357346006902690745
+      Hair4: 6838910949451511394
+      Hair5: -497281477832228278
+      Hair6: -3032152223400636890
+      Hair7: -1577020896751744253
+      ZombieA: -4075379173800860978
+      ZombieAr: 7435791811889813069
+      ZombieArm: 7647954893817037131
+      ZombieH: -985845785290918722
+      ZombieHe: -4360588190112993369
+      ZombieHea: -3788797482063945738
+      ZombieHead: 5836432117252860821
+      chlot: 3808963454545842953
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

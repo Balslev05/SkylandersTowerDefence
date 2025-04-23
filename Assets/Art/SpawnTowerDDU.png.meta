@@ -1,0 +1,371 @@
+fileFormatVersion: 2
+guid: 594de1f082e66db47890b685450987fa
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4271551129908003629
+    second: SpawnTowerDDU_0
+  - first:
+      213: -8384271278717953643
+    second: SpawnTowerDDU_1
+  - first:
+      213: 6141937722785171880
+    second: SpawnTowerDDU_2
+  - first:
+      213: 8359139504397151674
+    second: SpawnTowerDDU_3
+  - first:
+      213: -1278114935708279015
+    second: SpawnTowerDDU_4
+  - first:
+      213: 6660298672526202229
+    second: SpawnTowerDDU_5
+  - first:
+      213: -7365510507062757365
+    second: SpawnTowerDDU_6
+  - first:
+      213: 717391524599906400
+    second: SpawnTowerDDU_7
+  - first:
+      213: -334701454064497047
+    second: SpawnTowerDDU_8
+  - first:
+      213: 923632465776264461
+    second: SpawnTowerDDU_9
+  - first:
+      213: 4400105629288940059
+    second: SpawnTowerDDU_10
+  - first:
+      213: 8893238553807800044
+    second: SpawnTowerDDU_11
+  - first:
+      213: -1922653356640178433
+    second: SpawnTowerDDU_12
+  - first:
+      213: 6860397066336861121
+    second: SpawnTowerDDU_13
+  - first:
+      213: 6046674685767324151
+    second: SpawnTowerDDU_14
+  - first:
+      213: 4924159624866895085
+    second: SpawnTowerDDU_15
+  - first:
+      213: -6407322784811254379
+    second: SpawnTowerDDU_16
+  - first:
+      213: 2796217292757217720
+    second: SpawnTowerDDU_17
+  - first:
+      213: 3016987230412792875
+    second: SpawnTowerDDU_18
+  - first:
+      213: -1615102362801994153
+    second: SpawnTowerDDU_19
+  - first:
+      213: 38878703963834290
+    second: SpawnTowerDDU_20
+  - first:
+      213: 6431498246564013134
+    second: SpawnTowerDDU_21
+  - first:
+      213: -4856806072019981092
+    second: SpawnTowerDDU_22
+  - first:
+      213: 1002363847784615550
+    second: SpawnTowerDDU_23
+  - first:
+      213: -2533114697456524970
+    second: SpawnTowerDDU_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 800
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpawnTowerDDU_0
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 879
+        width: 1703
+        height: 1487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc3ae501e668b4c0800000000000000
+      internalID: -4271551129908003629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpawnTowerDDU_1
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 2017
+        width: 284
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599918b91b515ab80800000000000000
+      internalID: -8384271278717953643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpawnTowerDDU_2
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 1565
+        width: 592
+        height: 244
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a98e2741db8c3550800000000000000
+      internalID: 6141937722785171880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpawnTowerDDU_4
+      rect:
+        serializedVersion: 2
+        x: 2230
+        y: 886
+        width: 160
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f9cfadc39334ee0800000000000000
+      internalID: -1278114935708279015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpawnTowerDDU_5
+      rect:
+        serializedVersion: 2
+        x: 2598
+        y: 886
+        width: 164
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5751ee9da522e6c50800000000000000
+      internalID: 6660298672526202229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpawnTowerDDU_24
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 311
+        width: 164
+        height: 450
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65168ca8a9198dcd0800000000000000
+      internalID: -2533114697456524970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpawnTowerDDU_6
+      rect:
+        serializedVersion: 2
+        x: 3215
+        y: 985
+        width: 508
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a048611926db345891b873495fed13
+      internalID: -7365510507062757365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 893c0f7e143da7345bcf843d16fdbce4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpawnTowerDDU_0: -4271551129908003629
+      SpawnTowerDDU_1: -8384271278717953643
+      SpawnTowerDDU_10: 4400105629288940059
+      SpawnTowerDDU_11: 8893238553807800044
+      SpawnTowerDDU_12: -1922653356640178433
+      SpawnTowerDDU_13: 6860397066336861121
+      SpawnTowerDDU_14: 6046674685767324151
+      SpawnTowerDDU_15: 4924159624866895085
+      SpawnTowerDDU_16: -6407322784811254379
+      SpawnTowerDDU_17: 2796217292757217720
+      SpawnTowerDDU_18: 3016987230412792875
+      SpawnTowerDDU_19: -1615102362801994153
+      SpawnTowerDDU_2: 6141937722785171880
+      SpawnTowerDDU_20: 38878703963834290
+      SpawnTowerDDU_21: 6431498246564013134
+      SpawnTowerDDU_22: -4856806072019981092
+      SpawnTowerDDU_23: 1002363847784615550
+      SpawnTowerDDU_24: -2533114697456524970
+      SpawnTowerDDU_3: 8359139504397151674
+      SpawnTowerDDU_4: -1278114935708279015
+      SpawnTowerDDU_5: 6660298672526202229
+      SpawnTowerDDU_6: -7365510507062757365
+      SpawnTowerDDU_7: 717391524599906400
+      SpawnTowerDDU_8: -334701454064497047
+      SpawnTowerDDU_9: 923632465776264461
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

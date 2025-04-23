@@ -3,10 +3,10 @@ using TMPro;
 
 public class CurrencyManager : MonoBehaviour
 {
-    public TMP_Text currencyText;
+    [SerializeField] private TMP_Text currencyText;
     
     [SerializeField] private int startingCurrency;
-    private int currency;
+    public int currency;
 
     private void Start()
     {

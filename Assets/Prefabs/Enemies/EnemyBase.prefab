@@ -408,6 +408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4009017435757255336}
+  - component: {fileID: 2676224114631450453}
   m_Layer: 0
   m_Name: GFX
   m_TagString: Untagged
@@ -431,6 +432,32 @@ Transform:
   - {fileID: 6872775604954848130}
   m_Father: {fileID: 6700185481574369199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2676224114631450453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837633235119306702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a389a7264690a0a4c8eedb013bfb5d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hair: {fileID: 0}
+  Head: {fileID: 0}
+  Body: {fileID: 0}
+  ArmR: {fileID: 0}
+  ArmL: {fileID: 0}
+  ListOfHair: []
+  ListOfHead: []
+  ListOfBody: []
+  ListOfArmsR: []
+  ListOfArmsL: []
+  floatAmount: 0.05
+  floatDuration: 0.5
+  armSwingAmount: 15
+  armSwingDuration: 0.4
 --- !u!1 &7306026520593659040
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,11 +670,14 @@ MonoBehaviour:
   target: {fileID: 0}
   wayPointManager: {fileID: 0}
   healthBar: {fileID: 3639494526337408232}
+  direction: {x: 0, y: 0}
   maxHealth: 100
   currentHealth: 0
   moveSpeed: 2
   damage: 10
   distanceToWayPointThreshold: 0
+  currencyValue: 0
+  fromWave: 0
 --- !u!114 &8844550852943136951
 MonoBehaviour:
   m_ObjectHideFlags: 0

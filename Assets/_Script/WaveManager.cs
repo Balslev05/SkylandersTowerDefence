@@ -1,13 +1,17 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+
 
 public class WaveManager : MonoBehaviour
 {
     [SerializeField] private CurrencyManager currencyManager;
 
-    [SerializeField] private WayPointManager LeftWayPointManager;
-    [SerializeField] private WayPointManager RightWayPointManager;
+    public TMP_Text waveCounterText;
+
+    public WayPointManager LeftWayPointManager;
+    public WayPointManager RightWayPointManager;
 
     [SerializeField] private List<Wave> waves = new List<Wave>();
 
@@ -22,32 +26,35 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(StartBattle());
     }
 
-    private void Spawn(WayPointManager SpawnPoint, GameObject enemy)
+    private void Spawn(WayPointManager SpawnPoint, GameObject enemy, int currentWave)
     {
         EnemyBase spawnedEnemy = Instantiate(enemy, SpawnPoint.spawnPoint, Quaternion.identity).GetComponent<EnemyBase>();
         spawnedEnemy.wayPointManager = SpawnPoint;
         spawnedEnemy.target = SpawnPoint.wayPoints[0];
+        spawnedEnemy.fromWaveID = currentWave;
     }
 
     private IEnumerator StartBattle()
     {
+        UpdateText();
+
         for (int i = 0; i < waves[currentWave].Enemies.Count; i++)
         {
             if (waves[currentWave].SpawnLeft[i])
             {
-                Spawn(LeftWayPointManager, waves[currentWave].Enemies[i]);
+                Spawn(LeftWayPointManager, waves[currentWave].Enemies[i], currentWave);
             }
             else
             {
-                Spawn(RightWayPointManager, waves[currentWave].Enemies[i]);
+                Spawn(RightWayPointManager, waves[currentWave].Enemies[i], currentWave);;
             }
 
             yield return new WaitForSeconds(waves[currentWave].spawnDelay);
         }
         
-        currencyManager.GetMoney(waves[currentWave].currencyValue);
-
         yield return new WaitForSeconds(betweenWavesCooldown);
+
+        currencyManager.GetMoney(waves[currentWave].currencyValue);
         currentWave++;
         if (currentWave < waves.Count)
         {
@@ -58,5 +65,10 @@ public class WaveManager : MonoBehaviour
         {
             Debug.Log("Game Won");
         }
+    }
+
+    private void UpdateText()
+    {
+        waveCounterText.text = $"Wave: {(currentWave + 1).ToString()}/{waves.Count}";
     }
 }
