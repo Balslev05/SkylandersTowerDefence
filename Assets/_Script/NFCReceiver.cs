@@ -3,11 +3,13 @@ using UnityEngine;
 public class NFCReceiver : MonoBehaviour
 {
     public SerialController serialController;
+    TowerIDMaker towerInfoID;
     public int towerID, upgradeLevel, placementID;
 
     void Start()
     {
         //serialController = GameObject.Find("SerialController").GetComponent<SerialController>();
+        towerInfoID = GetComponent<TowerIDMaker>();
     }
 
     void Update()
@@ -18,17 +20,25 @@ public class NFCReceiver : MonoBehaviour
         {
             Debug.Log("Raw NFC Data: " + message);
 
-            string[] parts = message.Split(',');
+            string[] parts = message.Split('#');
 
-            if (parts.Length == 3)
+            if (parts.Length == 2)
             {
-                towerID = int.Parse(parts[0]);
-                upgradeLevel = int.Parse(parts[1]);
-                placementID = int.Parse(parts[2]);
+               TowerIdentity towerIdentityTemp = towerInfoID.GetTower(parts[1]);
+                if (towerIdentityTemp != null)
+                {
+                    towerID = towerIdentityTemp.towerType;
+                    upgradeLevel = towerIdentityTemp.towerUpgrade;
+                    placementID = int.Parse(parts[0]);
+                    Debug.Log($"Tower: {towerID}, Upgrade: {upgradeLevel}, Placement: {placementID}");
 
-                Debug.Log($"Tower: {towerID}, Upgrade: {upgradeLevel}, Placement: {placementID}");
+                    ProcessNFCData(towerID, upgradeLevel, placementID);
+                }
+                else
+                {
+                    Debug.LogWarning("invaild NFC Chip");
+                }
 
-                ProcessNFCData(towerID, upgradeLevel, placementID);
             }
             else
             {

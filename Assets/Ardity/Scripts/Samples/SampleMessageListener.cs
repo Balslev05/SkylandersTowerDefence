@@ -18,7 +18,7 @@ public class SampleMessageListener : MonoBehaviour
 {
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
-    {
+    {  
         Debug.Log("Message arrived: " + msg);
     }
 
