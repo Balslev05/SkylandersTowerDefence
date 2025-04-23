@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a03027548d784348a5d2b1fbe819cfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NFCReceiver: {fileID: 50750486}
 --- !u!114 &50750483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +212,7 @@ MonoBehaviour:
   towerID: 0
   upgradeLevel: 0
   placementID: 0
+  gameManager: {fileID: 0}
 --- !u!1 &63330541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,7 +1992,7 @@ GameObject:
   - component: {fileID: 638622772}
   m_Layer: 0
   m_Name: Struktures
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2409,6 +2411,7 @@ MonoBehaviour:
   - {fileID: 8982258383580432414, guid: c262f1c86f28d2f43bb4c376bf44c663, type: 3}
   - {fileID: 1889138985087773731, guid: 4e7a91fcb47f79c4393c99a13b31e7a2, type: 3}
   - {fileID: 5219305799753768360, guid: 373a2591ce0481046912723dbc856126, type: 3}
+  - {fileID: 5219305799753768360, guid: 373a2591ce0481046912723dbc856126, type: 3}
   Spawners:
   - {fileID: 1281728328}
   - {fileID: 463605726}
@@ -2418,7 +2421,6 @@ MonoBehaviour:
   - {fileID: 150416042}
   - {fileID: 446994422}
   - {fileID: 496742758}
-  - {fileID: 0}
   SpawnedTowers: []
   UsedSpawners: []
 --- !u!1 &847780441

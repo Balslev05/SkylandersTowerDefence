@@ -16,10 +16,12 @@ using System.Collections;
  */
 public class SampleMessageListener : MonoBehaviour
 {
+    public NFCReceiver NFCReceiver;
     // Invoked when a line of data is received from the serial device.
     void OnMessageArrived(string msg)
     {  
         Debug.Log("Message arrived: " + msg);
+        NFCReceiver.GetMessege(msg);
     }
 
     // Invoked when a connect/disconnect event occurs. The parameter 'success'

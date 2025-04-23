@@ -5,6 +5,7 @@ public class NFCReceiver : MonoBehaviour
     public SerialController serialController;
     TowerIDMaker towerInfoID;
     public int towerID, upgradeLevel, placementID;
+    public Gamemanager gameManager;
 
     void Start()
     {
@@ -12,7 +13,7 @@ public class NFCReceiver : MonoBehaviour
         towerInfoID = GetComponent<TowerIDMaker>();
     }
 
-    void Update()
+   /*  void Update()
     {
         string message = serialController.ReadSerialMessage();
 
@@ -22,9 +23,12 @@ public class NFCReceiver : MonoBehaviour
 
             string[] parts = message.Split('#');
 
+            Debug.Log("Parts: " + parts.Length);
+
             if (parts.Length == 2)
             {
                TowerIdentity towerIdentityTemp = towerInfoID.GetTower(parts[1]);
+               Debug.Log("Tower Identity: " + towerIdentityTemp);
                 if (towerIdentityTemp != null)
                 {
                     towerID = towerIdentityTemp.towerType;
@@ -45,19 +49,46 @@ public class NFCReceiver : MonoBehaviour
                 Debug.Log("Invalid NFC data received: " + message);
             }
         }
+    } */
+
+    public void GetMessege(string message)
+    {
+        Debug.Log("Got Messege");
+         if (message != null)
+        {
+            string[] parts = message.Split('#');
+                            Debug.Log("Does the shit work111111");
+             if (parts.Length == 2)
+            {
+               TowerIdentity towerIdentityTemp = towerInfoID.GetTower(parts[1]);
+                Debug.Log("Does the shit work 222222");
+                Debug.Log("Part0" +towerInfoID.GetTower(parts[0]));
+                Debug.Log("Part1" +towerInfoID.GetTower(parts[1]));
+              
+                if (towerIdentityTemp != null)
+                {
+                    Debug.Log("Does the shit work 333333");
+                    towerID = towerIdentityTemp.towerType;
+                    upgradeLevel = towerIdentityTemp.towerUpgrade;
+                    placementID = int.Parse(parts[0]);
+                    ProcessNFCData(towerID, upgradeLevel, placementID);
+                }
+                else
+                {
+                    Debug.LogWarning("invaild NFC Chip");
+                } 
+            }
+            else
+            {
+                Debug.Log("Invalid NFC data received: " + message);
+            } 
+        } 
     }
 
     void ProcessNFCData(int tower, int upgrade, int placement)
     {
         Debug.Log($"Processing Tower: {tower}, Upgrade: {upgrade}, Placement: {placement}");
-
-        if (upgrade == 1)
-        {
-            Debug.Log($"Upgrading Tower {tower} at Placement {placement}");
-        }
-        else if (upgrade == 2)
-        {
-            Debug.Log($"Boosting Tower {tower} at Placement {placement}");
-        }
+        gameManager.SpawnTowers(tower, upgrade, placement);
+        Debug.Log("The Shit Works");
     }
 }
