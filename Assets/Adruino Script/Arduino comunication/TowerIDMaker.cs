@@ -58,6 +58,7 @@ public class TowerIDMaker : MonoBehaviour
 
     public TowerIdentity GetTower(string id)
     {
+        
         for (int i = 0; i < towerID.Count;)
         {
             if (towerID[i].towerID == id)
