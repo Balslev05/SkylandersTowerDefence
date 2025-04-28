@@ -13,7 +13,7 @@ public class NFCReceiver : MonoBehaviour
         towerInfoID = GetComponent<TowerIDMaker>();
     }
 
-   /*  void Update()
+    void Update()
     {
         string message = serialController.ReadSerialMessage();
 
@@ -49,7 +49,7 @@ public class NFCReceiver : MonoBehaviour
                 Debug.Log("Invalid NFC data received: " + message);
             }
         }
-    } */
+    } 
 
     public void GetMessege(string message)
     {
