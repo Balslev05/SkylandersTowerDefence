@@ -1992,7 +1992,7 @@ GameObject:
   - component: {fileID: 638622772}
   m_Layer: 0
   m_Name: Struktures
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -9,6 +9,9 @@ public class Eksplosion : MonoBehaviour
     public float FireMarksTime = 0.5f;
     public GameObject FiremarksPrefab;
 
+    public float physicalDamage = 0.1f;
+    public float elementalDamage = 0.1f;
+
     void Start()
     {
         EKSPLODE();
@@ -21,10 +24,14 @@ public class Eksplosion : MonoBehaviour
         transform.DOScale(scale, 0.5f).SetEase(Ease.OutExpo).OnComplete(() => 
         transform.DOScale(0, 0.5f).SetEase(Ease.InExpo)).onComplete += () => LeaveFireMarks();
         Destroy(this.gameObject,0.6f);
-        
+    }
 
-
-
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            other.gameObject.GetComponent<Target>().TakeDamage(physicalDamage, elementalDamage);
+        }
     }
     public void LeaveFireMarks()
     {
