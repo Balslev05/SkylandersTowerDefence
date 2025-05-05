@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0937bb7c5b4c561488e13a66fdcb0fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serialController: {fileID: 50750483}
+  gameManager: {fileID: 778436876}
 --- !u!114 &50750486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,7 +214,7 @@ MonoBehaviour:
   towerID: 0
   upgradeLevel: 0
   placementID: 0
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 778436876}
 --- !u!1 &63330541
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2412,7 @@ MonoBehaviour:
   towers:
   - {fileID: 8982258383580432414, guid: c262f1c86f28d2f43bb4c376bf44c663, type: 3}
   - {fileID: 1889138985087773731, guid: 4e7a91fcb47f79c4393c99a13b31e7a2, type: 3}
+  - {fileID: 5219305799753768360, guid: 373a2591ce0481046912723dbc856126, type: 3}
   - {fileID: 5219305799753768360, guid: 373a2591ce0481046912723dbc856126, type: 3}
   - {fileID: 5219305799753768360, guid: 373a2591ce0481046912723dbc856126, type: 3}
   Spawners:

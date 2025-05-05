@@ -30,8 +30,7 @@ public class TowerAoe : TowerBase
     public override void Fire()
     {
         Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
-        bullet.GetComponent<Bullet>().physicalDamage = physicalDamage;
-        bullet.GetComponent<Bullet>().elementalDamage = elementalDamage;
+        
         Vector3 startScale = bullet.localScale;
 
         bullet.DOScale(bullet.localScale * offsetScale, DistanceToTarget() / 2).SetEase(Ease.OutCubic).OnComplete(() =>
@@ -48,7 +47,9 @@ public class TowerAoe : TowerBase
     public override void OnHit(GameObject Bullet)
     {
         Destroy(Bullet);
-        Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
+        Eksplosion OnHit = Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity).GetComponent<Eksplosion>();
+        OnHit.physicalDamage = physicalDamage;
+        OnHit.elementalDamage = elementalDamage;
     }
 
 

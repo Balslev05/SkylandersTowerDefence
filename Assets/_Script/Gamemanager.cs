@@ -64,6 +64,19 @@ public class Gamemanager : MonoBehaviour
         currencyManager.LoseMoney(tower.GetComponent<TowerBase>().TowerPrice);
     }  
 
+    public void RemoveTower(GameObject Tower)
+    {
+        for (int i = 0; i < SpawnedTowers.Count; i++)
+        {
+            if (SpawnedTowers[i] == Tower)
+            {
+                Destroy(SpawnedTowers[i]);
+                SpawnedTowers.RemoveAt(i);
+                UsedSpawners.RemoveAt(i);
+            }
+        }        
+    }
+
     public void SelectTower(GameObject Spawner)
     {
         for (int i = 0; i < Spawners.Length; i++)

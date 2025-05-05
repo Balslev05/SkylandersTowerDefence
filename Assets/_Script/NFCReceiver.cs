@@ -57,17 +57,11 @@ public class NFCReceiver : MonoBehaviour
          if (message != null)
         {
             string[] parts = message.Split('#');
-                            Debug.Log("Does the shit work111111");
              if (parts.Length == 2)
             {
-               TowerIdentity towerIdentityTemp = towerInfoID.GetTower(parts[1]);
-                Debug.Log("Does the shit work 222222");
-                Debug.Log("Part0" +towerInfoID.GetTower(parts[0]));
-                Debug.Log("Part1" +towerInfoID.GetTower(parts[1]));
-              
+               TowerIdentity towerIdentityTemp = towerInfoID.GetTower(parts[1]);              
                 if (towerIdentityTemp != null)
                 {
-                    Debug.Log("Does the shit work 333333");
                     towerID = towerIdentityTemp.towerType;
                     upgradeLevel = towerIdentityTemp.towerUpgrade;
                     placementID = int.Parse(parts[0]);
