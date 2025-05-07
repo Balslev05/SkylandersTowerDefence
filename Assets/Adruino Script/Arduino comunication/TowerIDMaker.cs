@@ -1,28 +1,26 @@
+using AYellowpaper.SerializedCollections;
 using DG.Tweening;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TowerIDMaker : MonoBehaviour
 {
+
+    [SerializedDictionary("activeTags","Timer To Expire")]
+    public SerializedDictionary<string, float> activeTags = new SerializedDictionary<string, float>();
+    [SerializedDictionary("tagToPlacementMap","placementID")]
+    public SerializedDictionary<string, int> tagToPlacementMap = new SerializedDictionary<string, int>();
+    
     public SerialController serialController;
     public TowerIdentity[] towerIDArray = new TowerIdentity[36];
     public Gamemanager gameManager;
 
     private float tagTimeout = 4.0f;
 
-    private Dictionary<string, TagState> activeTags = new Dictionary<string, TagState>();
-
-    class TagState
-    {
-        public int placementID;
-        public float lastSeenTime;
-        public TowerIdentity identity;
-    }
-
     void Start()
     {
         towerIDArray[0] = new TowerIdentity("153B3528", 1);
-
         towerIDArray[1] = new TowerIdentity("05D90728", 1);
         towerIDArray[2] = new TowerIdentity("059E4828", 1);
         towerIDArray[3] = new TowerIdentity("1D71158F900000", 1);
@@ -65,86 +63,78 @@ public class TowerIDMaker : MonoBehaviour
 
     void Update()
     {
-        foreach (var item in activeTags)
+        List<string> expiredTags = new List<string>();
+        //Debug.Log("Active tags: " + activeTags.Keys);
+        foreach (var tag in activeTags.Keys.ToArray())
         {
-            Debug.Log("Active Tag"+item.Key);
-        }
+            activeTags[tag] -= Time.deltaTime;
 
-        List<string> tagsToRemove = new List<string>();
-
-        foreach (var kvp in activeTags)
-        {
-            if (Time.time - kvp.Value.lastSeenTime > tagTimeout)
+            if (activeTags[tag] <= 0)
             {
-                tagsToRemove.Add(kvp.Key);
+                expiredTags.Add(tag);
             }
         }
 
-        for (int i = 0; i < tagsToRemove.Count; i++)
+        foreach (string tag in expiredTags)
         {
-            string tagID = tagsToRemove[i];
-            
-            var removedTag = activeTags[tagID];
-            Debug.Log($"[REMOVED] Tag at placement {removedTag.placementID} has been removed");
-            activeTags.Remove(tagID);
+            if (tagToPlacementMap.TryGetValue(tag, out int placementID))
+            {
+                // Fjern tårnet
+                Debug.Log("PlacementID: " + placementID);
+                gameManager.UsedSpawners[placementID].GetComponent<SpawnPoint>().TowerPlaced = false;
+                gameManager.RemoveTower(gameManager.SpawnedTowers[placementID]);
 
-            gameManager.UsedSpawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
-            gameManager.RemoveTower(gameManager.SpawnedTowers[i]);
+                Debug.Log($"[REMOVE] Tag {tag} timed out. Tower removed at placement {placementID}.");
+            }
+
+            // Fjern tag fra dictionaries
+            activeTags.Remove(tag);
+            tagToPlacementMap.Remove(tag);
         }
-        Debug.Log(activeTags.Count);
-
-
     }
 
     void OnMessageArrived(string message)
     {
-        Debug.Log("Message arrived: " + message);
-
         if (!string.IsNullOrEmpty(message))
         {
-            string placementOfTower = "";
+            string placementStr = "";
             string id = "";
-            bool nextMessage = false;
+            bool readingID = false;
 
-            for (int i = 0; i < message.Length; i++)
+            foreach (char c in message)
             {
-                bool skip = false;
-                if (message[i] == '#') { nextMessage = true; skip = true; }
-                if (message[i] == ' ') { skip = true; }
+                if (c == '#')
+                {
+                    readingID = true;
+                    continue;
+                }
 
-                if (!nextMessage && !skip) placementOfTower += message[i];
-                if (nextMessage && !skip) id += message[i];
+                if (c == ' ') continue;
+
+                if (!readingID)
+                    placementStr += c;
+                else
+                    id += c;
             }
 
             id = id.Replace(" ", "");
 
-            if (nextMessage && int.TryParse(placementOfTower, out int placementID))
+            if (int.TryParse(placementStr, out int placementID))
             {
-                TowerIdentity towerTemp = GetTower(id);
+                TowerIdentity tower = GetTower(id);
 
-                if (towerTemp != null)
+                if (tower != null)
                 {
-                    if (activeTags.ContainsKey(id))
-                    {
-                        activeTags[id].lastSeenTime = Time.time;
-                    }
-                    else
-                    {
+                    // Reset timer uanset hvad
+                    activeTags[id] = tagTimeout;
 
-                        Debug.Log($"[NEW] Tower placed: Type {towerTemp.towerType}, Placement {placementID}");
-                        gameManager.SpawnTowers(towerTemp.towerType, towerTemp.towerUpgrade, placementID);
-                       
-                        activeTags[id] = new TagState
-                        {
-                            placementID = placementID,
-                            lastSeenTime = Time.time,
-                            identity = towerTemp
-                        };
+                    // Kun placer hvis den ikke allerede er i gang
+                    if (!tagToPlacementMap.ContainsKey(id))
+                    {
+                        tagToPlacementMap[id] = placementID;
+                        gameManager.SpawnTowers(tower.towerType, tower.towerUpgrade, placementID);
+                        Debug.Log($"[SPAWN] Tower placed for tag {id} at {placementID}");
                     }
-                }
-                else
-                {
-                    Debug.Log("Tower temp is null");
                 }
             }
         }
@@ -152,14 +142,12 @@ public class TowerIDMaker : MonoBehaviour
 
     public TowerIdentity GetTower(string id)
     {
-        id = id.Replace(" ", ""); // Normalize
+        id = id.Replace(" ", "");
 
-        for (int i = 0; i < towerIDArray.Length; i++)
+        foreach (var tower in towerIDArray)
         {
-            if (towerIDArray[i] != null && towerIDArray[i].towerID.Replace(" ", "") == id)
-            {
-                return towerIDArray[i];
-            }
+            if (tower != null && tower.towerID.Replace(" ", "") == id)
+                return tower;
         }
 
         return null;
@@ -167,9 +155,6 @@ public class TowerIDMaker : MonoBehaviour
 
     void OnConnectionEvent(bool success)
     {
-        if (success)
-            Debug.Log("Connection established");
-        else
-            Debug.Log("Connection attempt failed or disconnection detected");
+        Debug.Log(success ? "Connection established" : "Connection lost");
     }
 }

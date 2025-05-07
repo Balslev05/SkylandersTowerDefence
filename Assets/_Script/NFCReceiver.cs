@@ -1,4 +1,4 @@
-using UnityEngine;
+/* using UnityEngine;
 
 public class NFCReceiver : MonoBehaviour
 {
@@ -81,8 +81,8 @@ public class NFCReceiver : MonoBehaviour
 
     void ProcessNFCData(int tower, int upgrade, int placement)
     {
-        Debug.Log($"Processing Tower: {tower}, Upgrade: {upgrade}, Placement: {placement}");
-        gameManager.SpawnTowers(tower, upgrade, placement);
-        Debug.Log("The Shit Works");
+       // Debug.Log($"Processing Tower: {tower}, Upgrade: {upgrade}, Placement: {placement}");
+       // gameManager.SpawnTowers(tower, upgrade, placement);
+       // Debug.Log("The Shit Works");
     }
-}
+} */

@@ -62,6 +62,23 @@ public class Gamemanager : MonoBehaviour
         UsedSpawners.Add(Spawners[SpawnerID]);
 
         currencyManager.LoseMoney(tower.GetComponent<TowerBase>().TowerPrice);
+    } 
+    public void SpawnTowers(int idTower, int Upgrade, int SpawnerID,string name)
+    {
+        CurrencyManager currencyManager = Manager.currencyManager;
+
+        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced|| currencyManager.currency < towers[idTower].GetComponent<TowerBase>().TowerPrice)
+        {
+            //Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = false;
+        return; }
+
+        GameObject tower = Instantiate(towers[idTower], Spawners[SpawnerID].transform.position, Quaternion.identity);
+        tower.name = name;
+        Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = true;
+        SpawnedTowers.Add(tower);
+        UsedSpawners.Add(Spawners[SpawnerID]);
+
+        currencyManager.LoseMoney(tower.GetComponent<TowerBase>().TowerPrice);
     }  
 
     public void RemoveTower(GameObject Tower)
@@ -71,6 +88,7 @@ public class Gamemanager : MonoBehaviour
             if (SpawnedTowers[i] == Tower)
             {
                 Destroy(SpawnedTowers[i]);
+                UsedSpawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
                 SpawnedTowers.RemoveAt(i);
                 UsedSpawners.RemoveAt(i);
             }

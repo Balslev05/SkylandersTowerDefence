@@ -167,6 +167,7 @@ public abstract class TowerBase : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+    
     public void UpgradeTower(int idUpgradePathWay, Transform SpawnerID,GameObject towerToreplace)
     {        
         if (idUpgradePathWay == 1)
