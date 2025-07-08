@@ -61,11 +61,4 @@ public class Rangers : TowerBase
         if (OnHitSpawn != null)
         Instantiate(OnHitSpawn, Bullet.transform.position, Quaternion.identity);
     }
-
-    /*public void secondaryFire(){
-        Transform bullet = Instantiate(Bulletprefab, ShootPoint.position, transform.rotation).transform;
-        bullet.GetComponent<Bullet>().damage = damage;
-        bullet.GetComponent<Bullet>().bulletSpeed = Random.Range(1, randomSpeed + 1);
-        bullet.GetComponent<Bullet>().SetDirection(bullet.up);
-    }*/
 }

@@ -5,6 +5,7 @@ public class SpawnPoint : MonoBehaviour
     public Gamemanager gameManager;
     public bool isSelected = false;
     public bool TowerPlaced = false;
+    public GameObject towerPlaced;
     
     void Start()
     {
@@ -25,6 +26,18 @@ public class SpawnPoint : MonoBehaviour
         isSelected = false;
         transform.DOScale(new Vector3(1f, 1f, 1f),0.5f);
       }
+    }
+    public GameObject GetTower()
+    {
+        for (int i = 0; i < gameManager.SpawnedTowers.Count; i++)
+        {
+            if (gameManager.UsedSpawners[i] == this.gameObject)
+            {
+                return gameManager.SpawnedTowers[i];
+            }
+        }
+        
+        return gameManager.SpawnedTowers[transform.GetSiblingIndex()];
     }
 
     public int ReadInputSpawnInput()

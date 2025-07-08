@@ -25,9 +25,8 @@ public class Gamemanager : MonoBehaviour
         }
     }
 
-    void Update()
+    void Update() // Time speed change
     {
-        //fastForward
         if (Input.GetKeyDown("space"))
         {
             Time.timeScale = 5;
@@ -43,26 +42,30 @@ public class Gamemanager : MonoBehaviour
     {
         Manager = GameObject.FindWithTag("Manager").GetComponent<Manager>();
     }
+
     public void SpawnTowers(int idTower, int SpawnerID)
     {
         SpawnTowers(idTower, 0, SpawnerID);   
     }  
+
     public void SpawnTowers(int idTower, int Upgrade, int SpawnerID)
     {
         CurrencyManager currencyManager = Manager.currencyManager;
 
-        if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced|| currencyManager.currency < towers[idTower].GetComponent<TowerBase>().TowerPrice)
+         if (Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced || currencyManager.currency < towers[idTower].GetComponent<TowerBase>().TowerPrice)
         {
-            //Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = false;
-        return; }
+           // Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = false;
+        return; } 
 
         GameObject tower = Instantiate(towers[idTower], Spawners[SpawnerID].transform.position, Quaternion.identity);
+        Debug.Log("Spawned tower");
         Spawners[SpawnerID].GetComponent<SpawnPoint>().TowerPlaced = true;
         SpawnedTowers.Add(tower);
         UsedSpawners.Add(Spawners[SpawnerID]);
 
         currencyManager.LoseMoney(tower.GetComponent<TowerBase>().TowerPrice);
     } 
+
     public void SpawnTowers(int idTower, int Upgrade, int SpawnerID,string name)
     {
         CurrencyManager currencyManager = Manager.currencyManager;

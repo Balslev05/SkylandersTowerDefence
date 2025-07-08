@@ -33,12 +33,12 @@ public class TowerAoe : TowerBase
         
         Vector3 startScale = bullet.localScale;
 
-        bullet.DOScale(bullet.localScale * offsetScale, DistanceToTarget() / 2).SetEase(Ease.OutCubic).OnComplete(() =>
-        bullet.DOScale(startScale*0.8f, DistanceToTarget() / 2).SetEase(Ease.InQuint));  
+        bullet.DOScale(bullet.localScale * offsetScale, DistanceToTargetTime() / 2).SetEase(Ease.OutCubic).OnComplete(() =>
+        bullet.DOScale(startScale*0.8f, DistanceToTargetTime() / 2).SetEase(Ease.InQuint));  
     
         bullet.DORotate(Vector3.forward * 360, 0.5f, RotateMode.FastBeyond360).SetRelative(true).SetEase(Ease.Linear).SetLoops(-1);
 
-        bullet.DOMove(FindTarget(), DistanceToTarget()).OnComplete(() => OnHit(bullet.gameObject));
+        bullet.DOMove(FindTarget(), DistanceToTargetTime()).OnComplete(() => OnHit(bullet.gameObject));
         
         StartCoroutine(reloade());
     }

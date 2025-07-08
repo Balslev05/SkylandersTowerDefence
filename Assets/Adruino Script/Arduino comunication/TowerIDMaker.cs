@@ -13,10 +13,13 @@ public class TowerIDMaker : MonoBehaviour
     public SerializedDictionary<string, int> tagToPlacementMap = new SerializedDictionary<string, int>();
     
     public SerialController serialController;
+ 
     public TowerIdentity[] towerIDArray = new TowerIdentity[36];
     public Gamemanager gameManager;
 
-    private float tagTimeout = 4.0f;
+    public List<string> expiredTags = new List<string>();
+
+    private float tagTimeout = 1.5f;
 
     void Start()
     {
@@ -61,32 +64,34 @@ public class TowerIDMaker : MonoBehaviour
         towerIDArray[35] = new TowerIdentity("1D201D8F900000", 4);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        List<string> expiredTags = new List<string>();
+      
         //Debug.Log("Active tags: " + activeTags.Keys);
         foreach (var tag in activeTags.Keys.ToArray())
         {
             activeTags[tag] -= Time.deltaTime;
 
-            if (activeTags[tag] <= 0)
+            if (activeTags[tag] <= 0 && !expiredTags.Contains(tag) )
             {
                 expiredTags.Add(tag);
             }
         }
 
-        foreach (string tag in expiredTags)
+        for (int i = 0; i < expiredTags.Count; i++)
         {
-            if (tagToPlacementMap.TryGetValue(tag, out int placementID))
+            string tag = expiredTags[i];
+            if (tagToPlacementMap.TryGetValue(tag, out int placementID) && expiredTags.Contains(tag))
             {
                 // Fjern tårnet
-                Debug.Log("PlacementID: " + placementID);
-                gameManager.UsedSpawners[placementID].GetComponent<SpawnPoint>().TowerPlaced = false;
-                gameManager.RemoveTower(gameManager.SpawnedTowers[placementID]);
-
+                activeTags.Remove(tag);
+                tagToPlacementMap.Remove(tag);
+                expiredTags.Remove(tag);
                 Debug.Log($"[REMOVE] Tag {tag} timed out. Tower removed at placement {placementID}.");
+                gameManager.Spawners[i].GetComponent<SpawnPoint>().TowerPlaced = false;
+                GameObject tower = gameManager.Spawners[i].GetComponent<SpawnPoint>().GetTower();
+                gameManager.RemoveTower(tower);
             }
-
             // Fjern tag fra dictionaries
             activeTags.Remove(tag);
             tagToPlacementMap.Remove(tag);
@@ -122,34 +127,37 @@ public class TowerIDMaker : MonoBehaviour
             if (int.TryParse(placementStr, out int placementID))
             {
                 TowerIdentity tower = GetTower(id);
-
+                Debug.Log("Tower: " + tower.towerType);
+                id = id.Replace(" ", "");
                 if (tower != null)
                 {
-                    // Reset timer uanset hvad
                     activeTags[id] = tagTimeout;
 
-                    // Kun placer hvis den ikke allerede er i gang
                     if (!tagToPlacementMap.ContainsKey(id))
                     {
-                        tagToPlacementMap[id] = placementID;
+                        Debug.Log("There is no tower");
                         gameManager.SpawnTowers(tower.towerType, tower.towerUpgrade, placementID);
+                        tagToPlacementMap[id] = placementID;
                         Debug.Log($"[SPAWN] Tower placed for tag {id} at {placementID}");
+                    }
+                    else
+                    {
+                        Debug.Log("There is already a tower");
                     }
                 }
             }
         }
     }
-
+    
     public TowerIdentity GetTower(string id)
     {
         id = id.Replace(" ", "");
 
         foreach (var tower in towerIDArray)
         {
-            if (tower != null && tower.towerID.Replace(" ", "") == id)
+            if (tower.towerID.Replace(" ", "") == id)
                 return tower;
         }
-
         return null;
     }
 

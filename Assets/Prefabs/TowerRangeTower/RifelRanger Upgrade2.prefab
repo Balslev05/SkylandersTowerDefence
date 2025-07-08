@@ -382,9 +382,8 @@ MonoBehaviour:
   OnHitSpawn: {fileID: 0}
   TowerPrice: 70
   range: 11
-  damage: 2
-  physicalDamage: 0.1
-  elementalDamage: 0.1
+  physicalDamage: 7
+  elementalDamage: 20
   fireRate: 0.15
   BulletSpeed: 100
   buildTime: 1
@@ -452,6 +451,14 @@ PrefabInstance:
       propertyPath: turningSpeed
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 522398284084718560, guid: 203ecce8c0e2d0849988fc0e5c60453f, type: 3}
+      propertyPath: physicalDamage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 522398284084718560, guid: 203ecce8c0e2d0849988fc0e5c60453f, type: 3}
+      propertyPath: elementalDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2491675907999501246, guid: 203ecce8c0e2d0849988fc0e5c60453f, type: 3}
       propertyPath: m_Name
       value: ShotgunRanger
@@ -514,6 +521,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6944716950516912525}
     m_Modifications:
+    - target: {fileID: 1841535868235293471, guid: e2ddd6df932319a4e9606a74b994a93b, type: 3}
+      propertyPath: physicalDamage
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841535868235293471, guid: e2ddd6df932319a4e9606a74b994a93b, type: 3}
+      propertyPath: elementalDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5045416954497849658, guid: e2ddd6df932319a4e9606a74b994a93b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.58

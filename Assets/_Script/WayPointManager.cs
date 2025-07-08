@@ -17,9 +17,10 @@ public class WayPointManager : MonoBehaviour
         {
             wayPoints[i] = transform.GetChild(i);
         }
+        FindDistaneWalked();
     }
 
-    public void FindDistanceWalked()
+    public void FindDistaneWalked()
     {
         totalDistance = 0;
         for (int i = 0; i < wayPoints.Length - 1; i++)

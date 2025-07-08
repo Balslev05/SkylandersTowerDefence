@@ -262,9 +262,8 @@ MonoBehaviour:
   OnHitSpawn: {fileID: 0}
   TowerPrice: 100
   range: 6
-  damage: 0.07
   physicalDamage: 0.1
-  elementalDamage: 0.1
+  elementalDamage: 0.25
   fireRate: 0.1
   BulletSpeed: 0.5
   buildTime: 2

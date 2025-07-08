@@ -380,9 +380,8 @@ MonoBehaviour:
   OnHitSpawn: {fileID: 0}
   TowerPrice: 70
   range: 8
-  damage: 1
-  physicalDamage: 0.1
-  elementalDamage: 0.1
+  physicalDamage: 2
+  elementalDamage: 1
   fireRate: 0.5
   BulletSpeed: 100
   buildTime: 1
@@ -392,7 +391,7 @@ MonoBehaviour:
   canFire: 0
   IsLooking: 0
   upgrade1Price: 110
-  upgrade1Prefab: {fileID: 8982258383580432414, guid: bf6e4b54e8af3f74c9049f28db6df80a, type: 3}
+  upgrade1Prefab: {fileID: 8982258383580432414, guid: 7acffabc7a9b3174cb64b125a89a6594, type: 3}
   upgrade2Price: 0
   upgrade2Prefab: {fileID: 0}
   SpreadAngle: 6

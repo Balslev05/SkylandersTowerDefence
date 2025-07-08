@@ -50,7 +50,7 @@ public class TowerFlameThrower : TowerBase
             Quaternion spreadRotation = Quaternion.Euler(0, 0, angleOffset);
             bullet.rotation = transform.rotation * spreadRotation;
 
-            bullet.DOScale(startScale * offsetScale, DistanceToTarget()).SetEase(Ease.OutCubic);
+            bullet.DOScale(startScale * offsetScale, DistanceToTargetTime()).SetEase(Ease.OutCubic);
 
             bulletRenderer.DOFade(0, FlameLifeTime).OnComplete(() => Destroy(bullet.gameObject));
             // Set direction properly so bullets move correctly

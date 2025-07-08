@@ -2,8 +2,7 @@ using System.Collections;
 using System.ComponentModel;
 using UnityEngine;
 using DG.Tweening;
-using UnityEditor.Callbacks;
-using System.Runtime.ExceptionServices;
+
 public abstract class TowerBase : MonoBehaviour
 {
     public Transform target;
@@ -46,7 +45,7 @@ public abstract class TowerBase : MonoBehaviour
     {
         if (target != null) return;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
-        Transform t = null;
+        /* Transform t = null;
         foreach (Collider2D collider in colliders)
         {
             if (collider.CompareTag("Enemy"))
@@ -54,7 +53,7 @@ public abstract class TowerBase : MonoBehaviour
                 t = collider.transform;
                 break;
             }
-        }
+        } */
         SortTargets(colliders);
     }
 
@@ -125,10 +124,6 @@ public abstract class TowerBase : MonoBehaviour
     Vector2 targetVelocity = target.GetComponent<EnemyBase>().direction.normalized;
     Vector2 predictedPosition = (Vector2)target.position + targetVelocity * aimConst;
 
-    if (Vector2.Distance(transform.position, predictedPosition) < DistanceToTarget())
-    {
-        return Vector2.Lerp(transform.position, predictedPosition, DistanceToTarget() / Vector2.Distance(transform.position, predictedPosition));
-    }
     return predictedPosition;
     }
 
@@ -151,7 +146,7 @@ public abstract class TowerBase : MonoBehaviour
         yield return new WaitForSeconds(fireRate);
         canFire = true;
     }
-    public float DistanceToTarget()
+    public float DistanceToTargetTime()
     {
         float distance = Vector2.Distance(transform.position, target.position);
         return Mathf.Ceil(distance/3 -BulletSpeed)+0.5f;
@@ -175,6 +170,7 @@ public abstract class TowerBase : MonoBehaviour
             GameObject tower = Instantiate(upgrade1Prefab, SpawnerID.position, Quaternion.identity);
             manager.currencyManager.LoseMoney(upgrade1Price);
             SpawnerID.GetComponent<SpawnPoint>().TowerPlaced = true;
+            Debug.Log("SpawnPoint");
             manager.gamemanager.ReplaceTowers(towerToreplace, tower);
         }
         else if (idUpgradePathWay == 2)
